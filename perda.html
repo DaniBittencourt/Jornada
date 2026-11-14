@@ -10,444 +10,6 @@
   <link href="css/style.css" rel="stylesheet"/>
   <script defer="" src="js/main.js">
   </script>
-  <style>
-   .pagina-perda .pagina-apresentacao > .container {
-  position:relative;
-  z-index:2;
-}
-
-.pagina-perda .pagina-apresentacao .etiqueta {
-  color:var(--verde);
-}
-
-
-
-.pagina-perda .pagina-apresentacao h1 em {
-  color:var(--argila);
-  font-weight:400;
-}
-
-
-
-.pagina-perda .ornamento-perda {
-  position:absolute;
-  top:0;
-  right:0;
-  height:100%;
-  width:45%;
-  max-width:none;
-  object-fit:contain;
-  object-position:center center;
-  pointer-events: auto;
-  z-index:1;
-}
-
-.pagina-perda .navegacao-fases {
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin:0;
-}
-
-.pagina-perda .navegacao-fases a {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 20px;
-  border:1px solid #C7D0C4;
-  border-radius:30px;
-  background:#fffdf9;
-  color:var(--verde-escuro);
-  font:600 .95rem/1.4 'DM Sans',Arial,sans-serif;
-  text-decoration:none;
-  transition:background .2s,color .2s;
-}
-
-.pagina-perda .navegacao-fases a:hover {
-  background:var(--verde);
-  color:#fff;
-}
-
-.pagina-perda .secao-interna {
-  padding:70px 0;
-  scroll-margin-top:25px;
-}
-
-.pagina-perda .titulo-secao {
-  display:flex;
-  align-items:center;
-  gap:22px;
-  margin-bottom:18px;
-}
-
-.pagina-perda .numero-secao {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-  width:68px;
-  height:68px;
-  border-radius:50%;
-  background:var(--verde-claro);
-  color:var(--verde);
-  font:400 1.8rem/1 'DM Serif Display',Georgia,serif;
-}
-
-.pagina-perda .titulo-secao .etiqueta {
-  margin-bottom:5px;
-  font-size:.75rem;
-  letter-spacing:2px;
-}
-
-.pagina-perda .titulo-secao h2 {
-  font:400 clamp(2rem,3.5vw,3rem)/1.2 'DM Serif Display',Georgia,serif;
-  color:#402D25;
-}
-
-.pagina-perda .introducao-secao {
-  max-width:850px;
-  margin:0 0 32px;
-  font-size:1.07rem;
-  line-height:1.85;
-}
-
-.pagina-perda .cartilhas-grade {
-  display:grid;
-  grid-template-columns:1fr;
-  gap:15px;
-  margin:28px 0;
-}
-
-.pagina-perda .cartilha {
-  min-width:0;
-  background:#fffdf9;
-  border:1px solid #dce2d7;
-  border-radius:18px;
-  overflow:hidden;
-}
-
-.pagina-perda .cartilha[open] {
-  border-color:#aabca7;
-}
-
-.pagina-perda .cartilha-titulo {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  padding:21px 25px;
-  cursor:pointer;
-  list-style:none;
-}
-
-.pagina-perda .cartilha-titulo::-webkit-details-marker {
-  display:none;
-}
-
-.pagina-perda .cartilha-titulo > span:first-child {
-  display:flex;
-  align-items:center;
-  gap:17px;
-  min-width:0;
-  flex-wrap:wrap;
-}
-
-.pagina-perda .cartilha-numero {
-  flex:0 0 43px;
-  width:43px;
-  height:43px;
-  display:grid;
-  place-items:center;
-  border-radius:13px;
-  background:var(--argila-clara);
-  color:#86533f;
-  font:400 1.25rem/1 'DM Serif Display',Georgia,serif;
-}
-
-.pagina-perda .cartilha-titulo strong {
-  display:block;
-  font:400 1.4rem/1.35 'DM Serif Display',Georgia,serif;
-  color:var(--verde-escuro);
-  margin:0;
-}
-
-.pagina-perda .cartilha-titulo small {
-  display:block;
-  width:100%;
-  font-size:.9rem;
-  line-height:1.6;
-  color:#6c786d;
-}
-
-.pagina-perda .cartilha-icone {
-  position:relative;
-  display:grid;
-  place-items:center;
-  flex:0 0 34px;
-  width:34px;
-  height:34px;
-  padding:0;
-  border-radius:50%;
-  background:#e8ede5;
-  color:#536c55;
-  font-size:0;
-  line-height:0;
-
-  transition:transform .2s;
-}
-
-.pagina-perda .cartilha-icone::before, .pagina-perda .cartilha-icone::after {
-  content:"";
-  position:absolute;
-  top:50%;
-  left:50%;
-  background:currentColor;
-  border-radius:2px;
-  transform:translate(-50%,-50%);
-}
-
-.pagina-perda .cartilha-icone::before {
-  width:14px;
-  height:2px;
-}
-
-.pagina-perda .cartilha-icone::after {
-  width:2px;
-  height:14px;
-}
-
-.pagina-perda .cartilha[open] .cartilha-icone {
-  transform:rotate(45deg);
-}
-
-.pagina-perda .cartilha-conteudo {
-  border-top:1px solid #edf0e9;
-  padding:8px 27px 27px;
-  line-height:1.8;
-  color:#49544a;
-  overflow-wrap:anywhere;
-}
-
-.pagina-perda .cartilha-conteudo h4 {
-  margin:22px 0 8px;
-  color:#4e6952;
-  font-size:1rem;
-}
-
-.pagina-perda .cartilha-conteudo p,.pagina-perda .cartilha-conteudo ul {
-  margin:0 0 14px;
-}
-
-.pagina-perda .cartilha-conteudo ul {
-  padding-left:22px;
-}
-
-.pagina-perda .cartilha-conteudo li {
-  margin-bottom:8px;
-}
-
-.pagina-perda .cartilha-conteudo a,.pagina-perda .fontes-jornada a {
-  color:#506c55;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-.pagina-perda .cartilha-alerta {
-  background:#f8ece6;
-  border-left:4px solid #c9917b;
-  padding:14px 16px;
-  border-radius:8px;
-  margin:18px 0;
-}
-
-.pagina-perda .cartilha-perguntas {
-  background:#edf1e9;
-  padding:16px;
-  border-radius:12px;
-  margin:18px 0;
-}
-
-.pagina-perda .cartilha-fonte {
-  margin-top:22px;
-  padding-top:14px;
-  border-top:1px solid #e4e9df;
-  font-size:.85rem;
-  color:#68746a;
-}
-
-.pagina-perda .secao-fontes {
-  padding:65px 0 75px;
-  background:#ecefe8;
-  border-top:1px solid #d6dfd1;
-}
-
-.pagina-perda .fontes-cabecalho h2 {
-  font:400 clamp(2rem,3.5vw,3rem)/1.2 'DM Serif Display',Georgia,serif;
-  color:var(--verde-escuro);
-}
-
-.pagina-perda .fontes-jornada {
-  max-width:900px;
-  margin-top:25px;
-  padding:28px;
-  background:#fffdf9;
-  border:1px solid #d6dfd1;
-  border-radius:18px;
-  line-height:1.8;
-}
-
-.pagina-perda .fontes-jornada ul {
-  padding-left:22px;
-  margin:14px 0;
-}
-
-.pagina-perda .fontes-jornada li {
-  margin-bottom:12px;
-}
-
-.pagina-perda .fontes-jornada p + p {
-  margin-top:12px;
-}
-
-.pagina-perda .sr-only-direitos {
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  white-space:nowrap;
-  border:0;
-}
-
-@media(max-width:1050px) {
-  .pagina-perda .ornamento-perda {
-    opacity:.3;
-    right:-110px;
-  }
-
-  .pagina-perda .pagina-apresentacao h1,
-
-}
-
-@media(max-width:700px) {
-  
-
-  .pagina-perda .ornamento-perda {
-    opacity:.13;
-    right:-45%;
-    height:100%;
-  }
-
-  
-
-  
-
-  .pagina-perda .navegacao-fases {
-    gap:10px;
-  }
-
-  .pagina-perda .navegacao-fases a {
-    padding:10px 15px;
-    font-size:.9rem;
-  }
-
-  .pagina-perda .secao-interna {
-    padding:50px 0;
-  }
-
-  .pagina-perda .titulo-secao {
-    align-items:flex-start;
-    gap:15px;
-  }
-
-  .pagina-perda .numero-secao {
-    width:52px;
-    height:52px;
-    font-size:1.35rem;
-  }
-
-  .pagina-perda .cartilha-titulo {
-    padding:18px;
-  }
-
-  .pagina-perda .cartilha-titulo strong {
-    font-size:1.18rem;
-  }
-
-  .pagina-perda .cartilha-conteudo {
-    padding:8px 20px 22px;
-  }
-
-  .pagina-perda .fontes-jornada {
-    padding:20px;
-  }
-
-}
-
-@media(prefers-reduced-motion:reduce) {
-  .pagina-perda .cartilha-icone,.pagina-perda .navegacao-fases a {
-    transition:none;
-  }
-
-}
-
-
-.pagina-perda .ornamento-perda {
-  width: 46%;
-  height: 100%;
-  right: 0;
-  object-fit: contain;
-  object-position: center center;
-  opacity: .9;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 26%);
-  mask-image: linear-gradient(to right, transparent, black 26%);
-}
-.pagina-perda .pagina-apresentacao > .container {
-  pointer-events: none;
-}
-.pagina-perda .pagina-apresentacao .navegacao-fases {
-  pointer-events: auto;
-}
-.pagina-perda .cartilha-conteudo p + p {
-  margin-top: 12px;
-}
-.pagina-perda .cartilha-conteudo strong {
-  color: var(--verde-escuro);
-}
-@media (max-width: 1050px) {
-  .pagina-perda .ornamento-perda {
-    opacity: .23;
-    right: -10%;
-  }
-  .pagina-perda .pagina-apresentacao h1,
-  
-}
-@media (max-width: 700px) {
-  .pagina-perda .ornamento-perda {
-    width: 100%;
-    height: 100%;
-    right: -35%;
-    opacity: .13;
-  }
-  .pagina-perda .pagina-apresentacao h1,
-  
-}
-  
-/* Entrada compacta aprovada para perda. */
-
-.pagina-perda .pagina-apresentacao .ornamento-perda { max-height: 100%; }
-@media (max-width: 700px) {
-  
-}
-
-/* Ajuste visual aprovado: cabeçalho interno mais compacto e verde suave mais presente. */
-
-@media (max-width: 700px) {
-  
-}
-  </style>
  </head>
  <body class="pagina-perda">
   <a class="pular-conteudo" href="#conteudo">
@@ -511,7 +73,7 @@
 
   <main id="conteudo">
    <section class="pagina-apresentacao">
-    <img alt="Ramo delicado em aquarela, com pequenas flores claras e folhas verde-sálvia." class="ornamento-perda" src="assets/perda-mosquitinho-aquarela.png" data-descricao="Ilustração delicada em aquarela, associada ao acolhimento após uma perda." tabindex="0"/>
+    <img alt="Ramo delicado em aquarela, com pequenas flores claras e folhas verde-sálvia." class="ornamento-perda" data-descricao="Ilustração delicada em aquarela, associada ao acolhimento após uma perda." src="assets/perda-mosquitinho-aquarela.png" tabindex="0"/>
     <div class="container">
      <h1>
       Há espaço para o seu tempo e para a
@@ -520,8 +82,9 @@
       </em>
      </h1>
      <p>
-      Uma perda gestacional ou neonatal pode trazer sentimentos difíceis de nomear. Aqui você encontra
-escuta, orientações cuidadosas e caminhos para buscar apoio, sem pressa e sem julgamentos.
+      Uma perda gestacional ou neonatal pode trazer sentimentos difíceis de nomear. Aqui
+      você encontra escuta, orientações cuidadosas e caminhos para buscar apoio,
+      sem pressa e sem julgamentos.
      </p>
      <nav aria-label="Navegar pelos temas após uma perda" class="navegacao-fases">
       <a href="#acolhimento">
@@ -562,9 +125,6 @@ escuta, orientações cuidadosas e caminhos para buscar apoio, sem pressa e sem 
          <strong>
           Não existe uma maneira certa de viver o luto
          </strong>
-         <small>
-          Sentimentos diferentes podem aparecer, desaparecer e voltar.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -575,39 +135,38 @@ escuta, orientações cuidadosas e caminhos para buscar apoio, sem pressa e sem 
          O que pode acontecer
         </h3>
         <p>
-         Tristeza, raiva, culpa, alívio, vazio ou confusão podem coexistir. Algumas pessoas choram muito;
-outras ficam em silêncio ou seguem a rotina no automático.
+         Tristeza, raiva, culpa, alívio, vazio ou confusão podem coexistir. Algumas
+         pessoas choram muito; outras ficam em silêncio ou seguem a rotina no
+         automático.
         </p>
         <h3>
          O que pode ajudar
         </h3>
         <p>
-         Respeitar seu próprio ritmo, reduzir cobranças e procurar pessoas que escutem sem julgar.
+         Respeitar seu próprio ritmo, reduzir cobranças e procurar pessoas que escutem
+         sem julgar.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         O luto não segue uma sequência fixa. Algumas pessoas precisam conversar; outras preferem
-silêncio. Respeitar o próprio ritmo não significa deixar de procurar ajuda quando o sofrimento
-fica insuportável.
+         O luto não segue uma sequência fixa. Algumas pessoas precisam conversar;
+         outras preferem silêncio. Respeitar o próprio ritmo não significa
+         deixar de procurar ajuda quando o sofrimento fica insuportável.
         </p>
         <p>
-         Algumas pessoas querem conversar; outras precisam de silêncio ou de tempo. A intensidade do
-         luto não mede o vínculo com o bebê, e não há prazo obrigatório para se sentir melhor.
+         Algumas pessoas querem conversar; outras precisam de silêncio ou de tempo. A
+         intensidade do luto não mede o vínculo com o bebê, e não
+         há prazo obrigatório para se sentir melhor.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           O que dizer quando faltam palavras?
          </strong>
-         <small>
-          Você não precisa explicar o que está sentindo.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -618,34 +177,32 @@ fica insuportável.
          Para você
         </h3>
         <p>
-         Frases simples como “hoje não quero conversar” ou “preciso de companhia” são suficientes.
+         Frases simples como “hoje não quero conversar” ou “preciso de
+         companhia” são suficientes.
         </p>
         <h3>
          Para quem acompanha
         </h3>
         <p>
-         Escutar, oferecer presença e evitar comparações ou tentativas de encontrar uma explicação
-         para a perda.
+         Escutar, oferecer presença e evitar comparações ou tentativas de
+         encontrar uma explicação para a perda.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Você pode dizer “não consigo falar sobre isso agora” ou pedir que uma pessoa de confiança
-comunique o ocorrido a familiares. Não existe obrigação de dar explicações.
+         Você pode dizer “não consigo falar sobre isso agora” ou pedir que
+         uma pessoa de confiança comunique o ocorrido a familiares. Não existe
+         obrigação de dar explicações.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           É normal sentir culpa?
          </strong>
-         <small>
-          A culpa pode surgir mesmo quando não há responsabilidade sua.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -656,41 +213,38 @@ comunique o ocorrido a familiares. Não existe obrigação de dar explicações.
          Entendendo o sentimento
         </h3>
         <p>
-         Buscar respostas e revisitar acontecimentos é comum no luto. Sentir culpa não significa que você
-causou a perda.
+         Buscar respostas e revisitar acontecimentos é comum no luto. Sentir culpa não
+         significa que você causou a perda.
         </p>
         <h3>
          Quando buscar ajuda
         </h3>
         <p>
          Se a culpa estiver persistente, intensa ou dificultar seu cotidiano, conversar com um
-profissional pode ajudar.
+         profissional pode ajudar.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Muitas perdas acontecem por fatores que a pessoa não controla. Se desejar compreender possíveis
-causas, peça uma conversa com a equipe e pergunte quais informações realmente estão disponíveis.
+         Muitas perdas acontecem por fatores que a pessoa não controla. Se desejar
+         compreender possíveis causas, peça uma conversa com a equipe e pergunte quais
+         informações realmente estão disponíveis.
         </p>
         <p>
-         Depois de uma perda, é comum procurar explicações e pensar no que poderia ter sido
-         diferente. Muitas perdas gestacionais têm causas que não poderiam ter sido evitadas pela
-         pessoa grávida; conversar com a equipe pode ajudar a compreender o que se sabe e o que
-         permanece incerto.
+         Depois de uma perda, é comum procurar explicações e pensar no que
+         poderia ter sido diferente. Muitas perdas gestacionais têm causas que não
+         poderiam ter sido evitadas pela pessoa grávida; conversar com a equipe pode ajudar a
+         compreender o que se sabe e o que permanece incerto.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como lidar com datas e lembranças?
          </strong>
-         <small>
-          Memórias e datas significativas podem despertar emoções.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -701,32 +255,34 @@ causas, peça uma conversa com a equipe e pergunte quais informações realmente
          Possibilidades
         </h3>
         <p>
-         Você pode guardar lembranças, criar um pequeno ritual, escrever uma carta ou optar por não fazer
-nada agora.
+         Você pode guardar lembranças, criar um pequeno ritual, escrever uma carta ou
+         optar por não fazer nada agora.
         </p>
         <h3>
          Seu direito de escolher
         </h3>
         <p>
-         Não há obrigação de guardar objetos, compartilhar a história ou participar de homenagens.
+         Não há obrigação de guardar objetos, compartilhar a
+         história ou participar de homenagens.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Algumas famílias guardam cartas, fotos ou objetos; outras preferem não fazê-lo. Escolha o que
-fizer sentido e saiba que essa decisão pode mudar com o tempo.
+         Algumas famílias guardam cartas, fotos ou objetos; outras preferem não
+         fazê-lo. Escolha o que fizer sentido e saiba que essa decisão pode mudar com o
+         tempo.
         </p>
        </div>
       </details>
      </div>
-
      <div class="bloco-dica">
       <h3>
        Cuidados no meu ritmo
       </h3>
       <p>
-       Marque os itens que forem úteis para você. A lista é apenas uma ajuda para se organizar.
+       Marque os itens que forem úteis para você. A lista é apenas uma ajuda
+       para se organizar.
       </p>
       <div aria-label="Cuidados no meu ritmo" class="checklist-jornada">
        <label>
@@ -791,9 +347,6 @@ fizer sentido e saiba que essa decisão pode mudar com o tempo.
          <strong>
           Quais cuidados físicos podem ser necessários?
          </strong>
-         <small>
-          A orientação depende do momento da gestação e do atendimento realizado.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -804,41 +357,38 @@ fizer sentido e saiba que essa decisão pode mudar com o tempo.
          Acompanhamento
         </h3>
         <p>
-         Peça à equipe de saúde orientações sobre recuperação, sangramento esperado, controle da dor e
-necessidade de retorno.
+         Peça à equipe de saúde orientações sobre
+         recuperação, sangramento esperado, controle da dor e necessidade de retorno.
         </p>
         <h3>
          Atenção
         </h3>
         <p>
-         Procure atendimento urgente diante de sangramento muito intenso, febre, dor forte ou piorando,
-desmaio, falta de ar ou secreção com odor desagradável.
+         Procure atendimento urgente diante de sangramento muito intenso, febre, dor forte ou
+         piorando, desmaio, falta de ar ou secreção com odor desagradável.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
          A necessidade de exames, medicamentos ou procedimentos depende da idade gestacional e das
-circunstâncias da perda. Febre, dor forte, desmaio ou sangramento intenso exigem avaliação
-urgente.
+         circunstâncias da perda. Febre, dor forte, desmaio ou sangramento intenso exigem
+         avaliação urgente.
         </p>
         <p>
-         Mesmo após uma perda, o corpo pode precisar de acompanhamento para avaliar sangramento,
-         dor, recuperação uterina e outras necessidades. Febre, sangramento muito intenso, desmaio
-         ou dor forte são motivos para procurar atendimento imediatamente.
+         Mesmo após uma perda, o corpo pode precisar de acompanhamento para avaliar
+         sangramento, dor, recuperação uterina e outras necessidades. Febre,
+         sangramento muito intenso, desmaio ou dor forte são motivos para procurar
+         atendimento imediatamente.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           O que acontece com a produção de leite?
          </strong>
-         <small>
-          Em algumas perdas, pode ocorrer descida do leite.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -849,39 +399,38 @@ urgente.
          Converse com a equipe
         </h3>
         <p>
-         Existem medidas para aliviar desconforto e, em determinadas situações, opções de tratamento. A
-conduta deve ser individualizada.
+         Existem medidas para aliviar desconforto e, em determinadas situações,
+         opções de tratamento. A conduta deve ser individualizada.
         </p>
         <h3>
          Procure avaliação
         </h3>
         <p>
-         Vermelhidão importante, febre ou dor intensa nas mamas precisam de avaliação de saúde.
+         Vermelhidão importante, febre ou dor intensa nas mamas precisam de
+         avaliação de saúde.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Após algumas perdas pode ocorrer produção de leite, com desconforto e sensibilidade. Não utilize
-medicamentos ou métodos para interromper a lactação sem orientação profissional.
+         Após algumas perdas pode ocorrer produção de leite, com desconforto e
+         sensibilidade. Não utilize medicamentos ou métodos para interromper a
+         lactação sem orientação profissional.
         </p>
         <p>
-         A produção de leite pode acontecer mesmo após uma perda, e isso pode ser fisicamente
-         desconfortável e emocionalmente difícil. A equipe pode orientar medidas de conforto e
-         avaliar condutas seguras de acordo com cada situação.
+         A produção de leite pode acontecer mesmo após uma perda, e isso pode
+         ser fisicamente desconfortável e emocionalmente difícil. A equipe pode
+         orientar medidas de conforto e avaliar condutas seguras de acordo com cada
+         situação.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como cuidar da saúde emocional?
          </strong>
-         <small>
-          Acolhimento psicológico pode ser útil em qualquer etapa.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -892,40 +441,37 @@ medicamentos ou métodos para interromper a lactação sem orientação profissi
          Apoio possível
         </h3>
         <p>
-         Você pode buscar atendimento na atenção primária do SUS, em serviços de saúde mental ou com
-profissional de sua confiança.
+         Você pode buscar atendimento na atenção primária do SUS, em
+         serviços de saúde mental ou com profissional de sua confiança.
         </p>
         <h3>
          Sinais de atenção
         </h3>
         <p>
-         Sofrimento intenso que não diminui, isolamento extremo, impossibilidade de realizar cuidados
-básicos ou pensamentos de se machucar merecem ajuda profissional imediata.
+         Sofrimento intenso que não diminui, isolamento extremo, impossibilidade de realizar
+         cuidados básicos ou pensamentos de se machucar merecem ajuda profissional imediata.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Apoio psicológico pode ser útil mesmo quando a pessoa não sabe nomear o que sente. Procure ajuda
-se o sofrimento estiver impedindo alimentação, sono ou atividades essenciais.
+         Apoio psicológico pode ser útil mesmo quando a pessoa não sabe nomear
+         o que sente. Procure ajuda se o sofrimento estiver impedindo alimentação,
+         sono ou atividades essenciais.
         </p>
         <p>
-         O acompanhamento psicológico pode ser útil, mas não precisa seguir um único formato. Você
-         pode pedir acolhimento individual, com a família ou com pessoas de confiança, e mudar de
-         ideia sobre o que deseja compartilhar.
+         O acompanhamento psicológico pode ser útil, mas não precisa seguir um
+         único formato. Você pode pedir acolhimento individual, com a família ou
+         com pessoas de confiança, e mudar de ideia sobre o que deseja compartilhar.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           E se eu precisar de informações sobre o que aconteceu?
          </strong>
-         <small>
-          É legítimo querer compreender — ou não querer falar disso agora.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -936,22 +482,23 @@ se o sofrimento estiver impedindo alimentação, sono ou atividades essenciais.
          Na consulta
         </h3>
         <p>
-         Você pode pedir explicações em linguagem clara sobre exames, hipóteses, condutas e
-         acompanhamento.
+         Você pode pedir explicações em linguagem clara sobre exames,
+         hipóteses, condutas e acompanhamento.
         </p>
         <h3>
          No seu ritmo
         </h3>
         <p>
-         Anote dúvidas ou leve uma pessoa de confiança. Você pode pedir uma conversa em outro momento, se
-possível.
+         Anote dúvidas ou leve uma pessoa de confiança. Você pode pedir uma
+         conversa em outro momento, se possível.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Peça que expliquem os resultados disponíveis e o que permanece incerto. Nem sempre é possível
-determinar a causa de uma perda, e isso não deve ser apresentado como culpa da família.
+         Peça que expliquem os resultados disponíveis e o que permanece incerto. Nem
+         sempre é possível determinar a causa de uma perda, e isso não deve ser
+         apresentado como culpa da família.
         </p>
        </div>
       </details>
@@ -981,9 +528,6 @@ determinar a causa de uma perda, e isso não deve ser apresentado como culpa da 
          <strong>
           Como pedir apoio sem precisar explicar tudo?
          </strong>
-         <small>
-          Pedidos concretos podem facilitar o cuidado.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -994,8 +538,8 @@ determinar a causa de uma perda, e isso não deve ser apresentado como culpa da 
          Exemplos
         </h3>
         <p>
-         “Você pode ficar comigo hoje?”, “Pode me acompanhar à consulta?” ou “Preciso de ajuda com as
-tarefas de casa”.
+         “Você pode ficar comigo hoje?”, “Pode me acompanhar à
+         consulta?” ou “Preciso de ajuda com as tarefas de casa”.
         </p>
         <h3>
          Limites
@@ -1007,21 +551,18 @@ tarefas de casa”.
          Para entender melhor
         </h3>
         <p>
-         Você pode pedir ajuda com compras, alimentação, tarefas de casa ou deslocamentos. Também é
-válido pedir privacidade e menos mensagens por um período.
+         Você pode pedir ajuda com compras, alimentação, tarefas de casa ou
+         deslocamentos. Também é válido pedir privacidade e menos mensagens por
+         um período.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           E quando as pessoas dizem coisas que machucam?
          </strong>
-         <small>
-          Comentários bem-intencionados também podem doer.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1032,8 +573,9 @@ válido pedir privacidade e menos mensagens por um período.
          Você pode responder
         </h3>
         <p>
-         “Prefiro não ouvir comparações”, “Não quero falar sobre uma próxima gravidez agora” ou “Preciso
-que você apenas me escute”.
+         “Prefiro não ouvir comparações”, “Não quero
+         falar sobre uma próxima gravidez agora” ou “Preciso que você
+         apenas me escute”.
         </p>
         <h3>
          Para a rede
@@ -1045,21 +587,18 @@ que você apenas me escute”.
          Para entender melhor
         </h3>
         <p>
-         Comentários como “você pode tentar de novo” podem causar dor. Se desejar, responda: “Preciso que
-você apenas me escute, sem tentar resolver”.
+         Comentários como “você pode tentar de novo” podem causar dor. Se
+         desejar, responda: “Preciso que você apenas me escute, sem tentar
+         resolver”.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como acolher parceiros e familiares?
          </strong>
-         <small>
-          O sofrimento não é necessariamente igual para todos.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1076,27 +615,24 @@ você apenas me escute, sem tentar resolver”.
          Cuidado compartilhado
         </h3>
         <p>
-         Se houver dificuldades de comunicação, uma conversa mediada por profissional pode ser útil.
+         Se houver dificuldades de comunicação, uma conversa mediada por profissional
+         pode ser útil.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Cada pessoa pode reagir de maneira diferente. Evite exigir que o outro sinta ou demonstre o luto
-do mesmo modo. Apoio mútuo e conversas respeitosas podem ajudar.
+         Cada pessoa pode reagir de maneira diferente. Evite exigir que o outro sinta ou demonstre o
+         luto do mesmo modo. Apoio mútuo e conversas respeitosas podem ajudar.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como falar com crianças sobre a perda?
          </strong>
-         <small>
-          Palavras simples e verdadeiras costumam ajudar.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1107,21 +643,23 @@ do mesmo modo. Apoio mútuo e conversas respeitosas podem ajudar.
          Uma conversa possível
         </h3>
         <p>
-         Use explicações adequadas à idade, sem metáforas confusas como “foi dormir”, e permita
-         perguntas.
+         Use explicações adequadas à idade, sem metáforas confusas como
+         “foi dormir”, e permita perguntas.
         </p>
         <h3>
          Acolhimento
         </h3>
         <p>
-         Reforce que a criança não causou a perda e que adultos continuarão cuidando dela.
+         Reforce que a criança não causou a perda e que adultos continuarão
+         cuidando dela.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Use palavras simples e verdadeiras, adequadas à idade, evitando explicações que possam
-confundir. Permita perguntas e procure apoio especializado se necessário.
+         Use palavras simples e verdadeiras, adequadas à idade, evitando
+         explicações que possam confundir. Permita perguntas e procure apoio
+         especializado se necessário.
         </p>
        </div>
       </details>
@@ -1142,7 +680,8 @@ confundir. Permita perguntas e procure apoio especializado se necessário.
       </div>
      </div>
      <p class="introducao-secao">
-      Há serviços de acolhimento e informações que podem ser solicitadas conforme sua situação.
+      Há serviços de acolhimento e informações que podem ser solicitadas
+      conforme sua situação.
      </p>
      <div class="cartilhas-grade">
       <details class="cartilha">
@@ -1151,9 +690,6 @@ confundir. Permita perguntas e procure apoio especializado se necessário.
          <strong>
           Posso pedir atendimento respeitoso e privacidade?
          </strong>
-         <small>
-          O cuidado deve preservar sua dignidade e suas escolhas.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1164,40 +700,38 @@ confundir. Permita perguntas e procure apoio especializado se necessário.
          No serviço de saúde
         </h3>
         <p>
-         Você pode solicitar explicações claras, privacidade, respeito à sua história e orientação sobre
-os próximos passos.
+         Você pode solicitar explicações claras, privacidade, respeito à
+         sua história e orientação sobre os próximos passos.
         </p>
         <h3>
          Se não se sentir acolhida
         </h3>
         <p>
-         É possível buscar a ouvidoria do serviço e, no SUS, os canais de ouvidoria disponíveis na
-         sua região.
+         É possível buscar a ouvidoria do serviço e, no SUS, os canais de
+         ouvidoria disponíveis na sua região.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Você pode pedir um ambiente reservado, explicações cuidadosas e respeito às suas decisões. A
-equipe deve considerar necessidades culturais, familiares e emocionais.
+         Você pode pedir um ambiente reservado, explicações cuidadosas e
+         respeito às suas decisões. A equipe deve considerar necessidades culturais,
+         familiares e emocionais.
         </p>
         <p>
-         Você pode solicitar explicações claras, privacidade e cuidado sensível ao luto. Se quiser,
-         pergunte sobre possibilidades de despedida, lembranças e encaminhamento para apoio,
-         respeitando suas escolhas e as regras do serviço.
+         Você pode solicitar explicações claras, privacidade e cuidado
+         sensível ao luto. Se quiser, pergunte sobre possibilidades de despedida,
+         lembranças e encaminhamento para apoio, respeitando suas escolhas e as regras do
+         serviço.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Há direitos específicos após perda gestacional ou neonatal?
          </strong>
-         <small>
-          Algumas proteções dependem do contexto e da legislação aplicável.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1208,35 +742,33 @@ equipe deve considerar necessidades culturais, familiares e emocionais.
          Orientação individual
         </h3>
         <p>
-         Questões de afastamento do trabalho, registro, documentação e procedimentos hospitalares podem
-variar conforme a situação.
+         Questões de afastamento do trabalho, registro, documentação e
+         procedimentos hospitalares podem variar conforme a situação.
         </p>
         <h3>
          Onde confirmar
         </h3>
         <p>
-         Peça orientação ao serviço de saúde, à assistência social ou a um serviço de orientação
-jurídica, como a Defensoria Pública.
+         Peça orientação ao serviço de saúde, à
+         assistência social ou a um serviço de orientação
+         jurídica, como a Defensoria Pública.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         As regras dependem do tipo de perda, idade gestacional e vínculo de trabalho. Consulte a página
-Direitos e os serviços oficiais para informações atualizadas sobre documentação e benefícios.
+         As regras dependem do tipo de perda, idade gestacional e vínculo de trabalho.
+         Consulte a página Direitos e os serviços oficiais para
+         informações atualizadas sobre documentação e benefícios.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Onde posso encontrar apoio psicológico?
          </strong>
-         <small>
-          Você pode começar pela unidade de saúde mais próxima.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1254,28 +786,24 @@ Direitos e os serviços oficiais para informações atualizadas sobre documenta�
          Outras possibilidades
         </h3>
         <p>
-         Profissionais de psicologia, grupos de apoio ao luto e serviços comunitários também podem
-oferecer escuta.
+         Profissionais de psicologia, grupos de apoio ao luto e serviços comunitários
+         também podem oferecer escuta.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         A UBS pode orientar sobre o cuidado em saúde mental e encaminhamentos disponíveis. A pessoa pode
-solicitar acolhimento mesmo meses depois da perda.
+         A UBS pode orientar sobre o cuidado em saúde mental e encaminhamentos
+         disponíveis. A pessoa pode solicitar acolhimento mesmo meses depois da perda.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           E se eu estiver em uma crise emocional?
          </strong>
-         <small>
-          Buscar ajuda imediatamente é um ato de cuidado.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1292,15 +820,16 @@ solicitar acolhimento mesmo meses depois da perda.
          Para conversar
         </h3>
         <p>
-         O CVV oferece apoio emocional gratuito pelo telefone 188 e em cvv.org.br. Em risco imediato, não
-espere por atendimento online.
+         O CVV oferece apoio emocional gratuito pelo telefone 188 e em cvv.org.br. Em risco
+         imediato, não espere por atendimento online.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Se houver risco de autolesão ou incapacidade de manter-se segura, procure urgência
-imediatamente. No Brasil, o SAMU é 192 e o CVV, 188, oferece escuta emocional.
+         Se houver risco de autolesão ou incapacidade de manter-se segura, procure
+         urgência imediatamente. No Brasil, o SAMU é 192 e o CVV, 188, oferece escuta
+         emocional.
         </p>
        </div>
       </details>
@@ -1320,11 +849,11 @@ imediatamente. No Brasil, o SAMU é 192 e o CVV, 188, oferece escuta emocional.
        </h2>
       </div>
      </div>
-
      <div class="fontes-jornada">
       <p>
-       As informações são educativas, com foco no contexto brasileiro, e não substituem avaliação
-profissional. Para orientações atualizadas, consulte:
+       As informações são educativas, com foco no contexto brasileiro, e
+       não substituem avaliação profissional. Para orientações
+       atualizadas, consulte:
       </p>
       <ul>
        <li>
@@ -1355,8 +884,8 @@ profissional. Para orientações atualizadas, consulte:
      </div>
     </div>
    </section>
-  </main>
 
+  </main>
   <footer class="rodape">
    <div class="container">
     <p class="rodape-logo">

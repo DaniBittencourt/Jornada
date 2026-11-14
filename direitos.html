@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
  <head>
   <meta charset="utf-8"/>
@@ -10,454 +11,8 @@
   <link href="css/style.css" rel="stylesheet"/>
   <script defer="" src="js/main.js">
   </script>
-  <style>
-   .pagina-direitos .pagina-apresentacao > .container {
-  position:relative;
-  z-index:2;
-}
-
-.pagina-direitos .pagina-apresentacao .etiqueta {
-  color:var(--verde);
-}
-
-
-
-.pagina-direitos .pagina-apresentacao h1 em {
-  color:var(--argila);
-  font-weight:400;
-}
-
-
-
-.pagina-direitos .ornamento-direitos {
-  position:absolute;
-  top:0;
-  right:0;
-  height:100%;
-  width:auto;
-  max-width:none;
-  object-fit:contain;
-  object-position:right center;
-  pointer-events: auto;
-  z-index:1;
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 30%);
-  mask-image:linear-gradient(to right,transparent 0%,black 30%);
-}
-
-.pagina-direitos .navegacao-fases {
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin:0;
-}
-
-.pagina-direitos .navegacao-fases a {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 20px;
-  border:1px solid #C7D0C4;
-  border-radius:30px;
-  background:#fffdf9;
-  color:var(--verde-escuro);
-  font:600 .95rem/1.4 'DM Sans',Arial,sans-serif;
-  text-decoration:none;
-  transition:background .2s,color .2s;
-}
-
-.pagina-direitos .navegacao-fases a:hover {
-  background:var(--verde);
-  color:#fff;
-}
-
-.pagina-direitos .secao-interna {
-  padding:70px 0;
-  scroll-margin-top:25px;
-}
-
-.pagina-direitos .titulo-secao {
-  display:flex;
-  align-items:center;
-  gap:22px;
-  margin-bottom:18px;
-}
-
-.pagina-direitos .numero-secao {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-  width:68px;
-  height:68px;
-  border-radius:50%;
-  background:var(--verde-claro);
-  color:var(--verde);
-  font:400 1.8rem/1 'DM Serif Display',Georgia,serif;
-}
-
-.pagina-direitos .titulo-secao .etiqueta {
-  margin-bottom:5px;
-  font-size:.75rem;
-  letter-spacing:2px;
-}
-
-.pagina-direitos .titulo-secao h2 {
-  font:400 clamp(2rem,3.5vw,3rem)/1.2 'DM Serif Display',Georgia,serif;
-  color:#402D25;
-}
-
-.pagina-direitos .introducao-secao {
-  max-width:850px;
-  margin:0 0 32px;
-  font-size:1.07rem;
-  line-height:1.85;
-}
-
-.pagina-direitos .cartilhas-grade {
-  display:grid;
-  grid-template-columns:1fr;
-  gap:15px;
-  margin:28px 0;
-}
-
-.pagina-direitos .cartilha {
-  min-width:0;
-  background:#fffdf9;
-  border:1px solid #dce2d7;
-  border-radius:18px;
-  overflow:hidden;
-}
-
-.pagina-direitos .cartilha[open] {
-  border-color:#aabca7;
-}
-
-.pagina-direitos .cartilha-titulo {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  padding:21px 25px;
-  cursor:pointer;
-  list-style:none;
-}
-
-.pagina-direitos .cartilha-titulo::-webkit-details-marker {
-  display:none;
-}
-
-.pagina-direitos .cartilha-titulo > span:first-child {
-  display:flex;
-  align-items:center;
-  gap:17px;
-  min-width:0;
-  flex-wrap:wrap;
-}
-
-.pagina-direitos .cartilha-numero {
-  flex:0 0 43px;
-  width:43px;
-  height:43px;
-  display:grid;
-  place-items:center;
-  border-radius:13px;
-  background:var(--argila-clara);
-  color:#86533f;
-  font:400 1.25rem/1 'DM Serif Display',Georgia,serif;
-}
-
-.pagina-direitos .cartilha-titulo strong {
-  display:block;
-  font:400 1.4rem/1.35 'DM Serif Display',Georgia,serif;
-  color:var(--verde-escuro);
-  margin:0;
-}
-
-.pagina-direitos .cartilha-titulo small {
-  display:block;
-  width:100%;
-  font-size:.9rem;
-  line-height:1.6;
-  color:#6c786d;
-}
-
-.pagina-direitos .cartilha-icone {
-  position:relative;
-  display:grid;
-  place-items:center;
-  flex:0 0 34px;
-  width:34px;
-  height:34px;
-  padding:0;
-  border-radius:50%;
-  background:#e8ede5;
-  color:#536c55;
-  font-size:0;
-  line-height:0;
-  transition:transform .2s;
-}
-
-.pagina-direitos .cartilha-icone::before, .pagina-direitos .cartilha-icone::after {
-  content:"";
-  position:absolute;
-  top:50%;
-  left:50%;
-  background:currentColor;
-  border-radius:2px;
-  transform:translate(-50%,-50%);
-}
-
-.pagina-direitos .cartilha-icone::before {
-  width:14px;
-  height:2px;
-}
-
-.pagina-direitos .cartilha-icone::after {
-  width:2px;
-  height:14px;
-}
-
-.pagina-direitos .cartilha[open] .cartilha-icone {
-  transform:rotate(45deg);
-}
-
-.pagina-direitos .cartilha-conteudo {
-  border-top:1px solid #edf0e9;
-  padding:8px 27px 27px;
-  line-height:1.8;
-  color:#49544a;
-  overflow-wrap:anywhere;
-}
-
-.pagina-direitos .cartilha-conteudo h4 {
-  margin:22px 0 8px;
-  color:#4e6952;
-  font-size:1rem;
-}
-
-.pagina-direitos .cartilha-conteudo p,.pagina-direitos .cartilha-conteudo ul {
-  margin:0 0 14px;
-}
-
-.pagina-direitos .cartilha-conteudo ul {
-  padding-left:22px;
-}
-
-.pagina-direitos .cartilha-conteudo li {
-  margin-bottom:8px;
-}
-
-.pagina-direitos .cartilha-conteudo a,.pagina-direitos .fontes-jornada a {
-  color:#506c55;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-.pagina-direitos .cartilha-alerta {
-  background:#f8ece6;
-  border-left:4px solid #c9917b;
-  padding:14px 16px;
-  border-radius:8px;
-  margin:18px 0;
-}
-
-.pagina-direitos .cartilha-perguntas {
-  background:#edf1e9;
-  padding:16px;
-  border-radius:12px;
-  margin:18px 0;
-}
-
-.pagina-direitos .cartilha-fonte {
-  margin-top:22px;
-  padding-top:14px;
-  border-top:1px solid #e4e9df;
-  font-size:.85rem;
-  color:#68746a;
-}
-
-.pagina-direitos .secao-fontes {
-  padding:65px 0 75px;
-  background:#ecefe8;
-  border-top:1px solid #d6dfd1;
-}
-
-.pagina-direitos .fontes-cabecalho h2 {
-  font:400 clamp(2rem,3.5vw,3rem)/1.2 'DM Serif Display',Georgia,serif;
-  color:var(--verde-escuro);
-}
-
-.pagina-direitos .fontes-jornada {
-  max-width:900px;
-  margin-top:25px;
-  padding:28px;
-  background:#fffdf9;
-  border:1px solid #d6dfd1;
-  border-radius:18px;
-  line-height:1.8;
-}
-
-.pagina-direitos .fontes-jornada ul {
-  padding-left:22px;
-  margin:14px 0;
-}
-
-.pagina-direitos .fontes-jornada li {
-  margin-bottom:12px;
-}
-
-.pagina-direitos .fontes-jornada p + p {
-  margin-top:12px;
-}
-
-.pagina-direitos .sr-only-direitos {
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  white-space:nowrap;
-  border:0;
-}
-
-@media(max-width:1050px) {
-  .pagina-direitos .ornamento-direitos {
-    opacity:.3;
-    right:-110px;
-  }
-
-  .pagina-direitos .pagina-apresentacao h1,
-
-}
-
-@media(max-width:700px) {
-  
-
-  .pagina-direitos .ornamento-direitos {
-    opacity:.13;
-    right:-45%;
-    height:100%;
-  }
-
-  
-
-  
-
-  .pagina-direitos .navegacao-fases {
-    gap:10px;
-  }
-
-  .pagina-direitos .navegacao-fases a {
-    padding:10px 15px;
-    font-size:.9rem;
-  }
-
-  .pagina-direitos .secao-interna {
-    padding:50px 0;
-  }
-
-  .pagina-direitos .titulo-secao {
-    align-items:flex-start;
-    gap:15px;
-  }
-
-  .pagina-direitos .numero-secao {
-    width:52px;
-    height:52px;
-    font-size:1.35rem;
-  }
-
-  .pagina-direitos .cartilha-titulo {
-    padding:18px;
-  }
-
-  .pagina-direitos .cartilha-titulo strong {
-    font-size:1.18rem;
-  }
-
-  .pagina-direitos .cartilha-conteudo {
-    padding:8px 20px 22px;
-  }
-
-  .pagina-direitos .fontes-jornada {
-    padding:20px;
-  }
-
-}
-
-@media(prefers-reduced-motion:reduce) {
-  .pagina-direitos .cartilha-icone,.pagina-direitos .navegacao-fases a {
-    transition:none;
-  }
-
-}
-
-.pagina-direitos .pagina-apresentacao .ornamento-direitos {
-  right:0;
-  opacity:.95;
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 28%);
-  mask-image:linear-gradient(to right,transparent 0%,black 28%);
-}
-
-.pagina-direitos .pagina-apresentacao > .container {
-  pointer-events:none;
-}
-
-.pagina-direitos .pagina-apresentacao .navegacao-fases {
-  pointer-events:auto;
-}
-
-.pagina-direitos .nota-legal {
-  background:#f8ece6;
-  border-left:4px solid #c9917b;
-  border-radius:10px;
-  padding:20px 24px;
-  margin-top:28px;
-  max-width:900px;
-  line-height:1.8;
-}
-
-.pagina-direitos .cartilha-conteudo p + p {
-  margin-top:12px;
-}
-
-.pagina-direitos .cartilha-conteudo strong {
-  color:var(--verde-escuro);
-}
-
-@media(max-width:1050px) {
-  .pagina-direitos .pagina-apresentacao .ornamento-direitos {
-    opacity:.25;
-    right:-100px;
-  }
-
-}
-
-@media(max-width:700px) {
-  .pagina-direitos .pagina-apresentacao .ornamento-direitos {
-    opacity:.12;
-    right:-45%;
-  }
-
-}
-
-  
-/* Entrada compacta aprovada para direitos. */
-
-.pagina-direitos .pagina-apresentacao .ornamento-direitos { max-height: 100%; }
-@media (max-width: 700px) {
-  
-}
-
-/* Ajuste visual aprovado: cabeçalho interno mais compacto e verde suave mais presente. */
-
-@media (max-width: 700px) {
-  
-}
-  </style>
  </head>
+
  <body class="pagina-direitos">
   <a class="pular-conteudo" href="#conteudo">
    Pular para o conteúdo
@@ -520,7 +75,7 @@
 
   <main id="conteudo">
    <section class="pagina-apresentacao">
-    <img alt="Ilustração em aquarela de uma mulher, representando direitos na maternidade." class="ornamento-direitos" src="assets/direitos-mulher-curitibana-aquarela.png" data-descricao="Ilustração em aquarela de uma mulher, representando direitos na maternidade." tabindex="0"/>
+    <img alt="Ilustração em aquarela de uma mulher, representando direitos na maternidade." class="ornamento-direitos" data-descricao="Ilustração em aquarela de uma mulher, representando direitos na maternidade." src="assets/direitos-mulher-curitibana-aquarela.png" tabindex="0"/>
     <div class="container">
      <h1>
       Conhecer seus direitos faz parte da
@@ -529,8 +84,9 @@
       </em>
      </h1>
      <p>
-      Informação também é cuidado. Conheça garantias importantes durante a gestação, o parto, o
-pós-parto e a vida profissional, com orientações para buscar apoio quando necessário.
+      Informação também é cuidado. Conheça garantias importantes
+      durante a gestação, o parto, o pós-parto e a vida profissional, com
+      orientações para buscar apoio quando necessário.
      </p>
      <nav aria-label="Navegar pelos temas de direitos" class="navegacao-fases">
       <a href="#gestacao">
@@ -565,7 +121,8 @@ pós-parto e a vida profissional, com orientações para buscar apoio quando nec
       </div>
      </div>
      <p class="introducao-secao">
-      Direitos relacionados ao acompanhamento da gravidez, à informação e ao cuidado respeitoso.
+      Direitos relacionados ao acompanhamento da gravidez, à informação e ao
+      cuidado respeitoso.
      </p>
      <div class="cartilhas-grade">
       <details class="cartilha">
@@ -584,15 +141,17 @@ pós-parto e a vida profissional, com orientações para buscar apoio quando nec
          O que você precisa saber
         </h3>
         <p>
-         A gestante tem direito ao acompanhamento pré-natal na rede pública de saúde, com consultas,
-exames e orientações conforme suas necessidades e os protocolos assistenciais.
+         A gestante tem direito ao acompanhamento pré-natal na rede pública de
+         saúde, com consultas, exames e orientações conforme suas necessidades
+         e os protocolos assistenciais.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Procure uma Unidade Básica de Saúde (UBS) assim que souber da gestação. A equipe pode orientar
-sobre calendário de consultas, exames e encaminhamentos.
+         Procure uma Unidade Básica de Saúde (UBS) assim que souber da
+         gestação. A equipe pode orientar sobre calendário de consultas, exames
+         e encaminhamentos.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -604,18 +163,20 @@ sobre calendário de consultas, exames e encaminhamentos.
          Para entender melhor
         </h3>
         <p>
-         Na primeira consulta, peça que expliquem o calendário de acompanhamento, quais exames estão
-indicados e como receber os resultados. Se faltar vaga, solicite orientação da UBS sobre o fluxo
-de atendimento. O pré-natal também inclui escuta, vacinação e avaliação da saúde emocional.
+         Na primeira consulta, peça que expliquem o calendário de acompanhamento,
+         quais exames estão indicados e como receber os resultados. Se faltar vaga, solicite
+         orientação da UBS sobre o fluxo de atendimento. O pré-natal
+         também inclui escuta, vacinação e avaliação da
+         saúde emocional.
         </p>
         <p>
-         O atendimento deve incluir orientações sobre exames, vacinação, sinais de alerta e
-         maternidade de referência. Caso encontre barreiras de acesso, peça à UBS que explique os
-         caminhos de encaminhamento e registre sua solicitação.
+         O atendimento deve incluir orientações sobre exames, vacinação,
+         sinais de alerta e maternidade de referência. Caso encontre barreiras de acesso,
+         peça à UBS que explique os caminhos de encaminhamento e registre sua
+         solicitação.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -632,38 +193,40 @@ de atendimento. O pré-natal também inclui escuta, vacinação e avaliação da
          O que você precisa saber
         </h3>
         <p>
-         Você tem direito a receber explicações compreensíveis sobre exames, procedimentos, benefícios,
-riscos e alternativas, para participar das decisões sobre seu cuidado.
+         Você tem direito a receber explicações compreensíveis sobre
+         exames, procedimentos, benefícios, riscos e alternativas, para participar das
+         decisões sobre seu cuidado.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Peça que a equipe explique o motivo de cada conduta. Você pode fazer perguntas e solicitar que
-suas preferências sejam registradas.
+         Peça que a equipe explique o motivo de cada conduta. Você pode fazer perguntas
+         e solicitar que suas preferências sejam registradas.
         </div>
         <p class="cartilha-fonte">
          <strong>
           Base de referência:
          </strong>
-         Carta dos Direitos dos Usuários da Saúde; princípios do consentimento informado.
+         Carta dos Direitos dos Usuários da Saúde; princípios do consentimento
+         informado.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Antes de aceitar um procedimento, você pode perguntar o motivo, os benefícios, os riscos e as
-alternativas. Em situações urgentes, a equipe pode precisar agir rapidamente, mas deve manter
-uma comunicação clara e respeitosa.
+         Antes de aceitar um procedimento, você pode perguntar o motivo, os benefícios,
+         os riscos e as alternativas. Em situações urgentes, a equipe pode precisar
+         agir rapidamente, mas deve manter uma comunicação clara e respeitosa.
         </p>
         <p>
          Consentimento informado significa compreender a proposta de cuidado e poder fazer
-         perguntas. Sempre que possível, solicite que expliquem alternativas, possíveis
-         consequências e o que muda se você preferir esperar ou não realizar um procedimento.
+         perguntas. Sempre que possível, solicite que expliquem alternativas,
+         possíveis consequências e o que muda se você preferir esperar ou
+         não realizar um procedimento.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -680,15 +243,15 @@ uma comunicação clara e respeitosa.
          O que você precisa saber
         </h3>
         <p>
-         O atendimento deve respeitar sua dignidade, privacidade, individualidade e necessidades, sem
-discriminação.
+         O atendimento deve respeitar sua dignidade, privacidade, individualidade e necessidades,
+         sem discriminação.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Se você se sentir desrespeitada, anote data, local e o ocorrido; procure a ouvidoria do serviço
-ou a Ouvidoria-Geral do SUS.
+         Se você se sentir desrespeitada, anote data, local e o ocorrido; procure a ouvidoria
+         do serviço ou a Ouvidoria-Geral do SUS.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -700,13 +263,12 @@ ou a Ouvidoria-Geral do SUS.
          Para entender melhor
         </h3>
         <p>
-         O atendimento deve acolher adolescentes, pessoas LGBTQIA+, pessoas com deficiência, migrantes e
-diferentes configurações familiares. Você pode pedir explicações acessíveis e informar o nome
-pelo qual deseja ser chamada.
+         O atendimento deve acolher adolescentes, pessoas LGBTQIA+, pessoas com deficiência,
+         migrantes e diferentes configurações familiares. Você pode pedir
+         explicações acessíveis e informar o nome pelo qual deseja ser chamada.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -723,15 +285,15 @@ pelo qual deseja ser chamada.
          O que você precisa saber
         </h3>
         <p>
-         No SUS, a gestante tem direito de conhecer previamente o serviço de saúde em que será realizado
-o parto, conforme a organização da rede local.
+         No SUS, a gestante tem direito de conhecer previamente o serviço de saúde em
+         que será realizado o parto, conforme a organização da rede local.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Pergunte na UBS qual é a maternidade de referência e como funciona o atendimento em caso de
-         urgência.
+         Pergunte na UBS qual é a maternidade de referência e como funciona o
+         atendimento em caso de urgência.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -743,8 +305,9 @@ o parto, conforme a organização da rede local.
          Para entender melhor
         </h3>
         <p>
-         Pergunte durante o pré-natal qual serviço deve procurar para o parto e em quais situações é
-necessário ir diretamente à urgência. Guarde endereço, telefone e opções de transporte.
+         Pergunte durante o pré-natal qual serviço deve procurar para o parto e em
+         quais situações é necessário ir diretamente à
+         urgência. Guarde endereço, telefone e opções de transporte.
         </p>
        </div>
       </details>
@@ -776,7 +339,8 @@ necessário ir diretamente à urgência. Guarde endereço, telefone e opções d
       </div>
      </div>
      <p class="introducao-secao">
-      Informações essenciais para um parto com respeito, segurança e participação nas decisões.
+      Informações essenciais para um parto com respeito, segurança e
+      participação nas decisões.
      </p>
      <div class="cartilhas-grade">
       <details class="cartilha">
@@ -795,16 +359,18 @@ necessário ir diretamente à urgência. Guarde endereço, telefone e opções d
          O que você precisa saber
         </h3>
         <p>
-         Nos serviços do SUS e nos serviços privados abrangidos pela legislação, a parturiente tem
-direito à presença de um acompanhante de sua escolha durante o trabalho de parto, o parto e o
-pós-parto imediato.
+         Nos serviços do SUS e nos serviços privados abrangidos pela
+         legislação, a parturiente tem direito à presença de um
+         acompanhante de sua escolha durante o trabalho de parto, o parto e o pós-parto
+         imediato.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Informe previamente quem será sua pessoa acompanhante e peça orientação à maternidade sobre as
-regras de acesso e identificação.
+         Informe previamente quem será sua pessoa acompanhante e peça
+         orientação à maternidade sobre as regras de acesso e
+         identificação.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -816,18 +382,17 @@ regras de acesso e identificação.
          Para entender melhor
         </h3>
         <p>
-         A pessoa escolhida para acompanhar o parto não precisa ser necessariamente o pai do bebê.
-Confirme antecipadamente as orientações da maternidade e consulte a legislação aplicável na rede
-pública ou privada.
+         A pessoa escolhida para acompanhar o parto não precisa ser necessariamente o pai do
+         bebê. Confirme antecipadamente as orientações da maternidade e consulte
+         a legislação aplicável na rede pública ou privada.
         </p>
         <p>
-         O direito a acompanhante deve ser respeitado nos serviços de saúde conforme a legislação
-         aplicável. Se houver restrição, peça a justificativa e orientação à ouvidoria do
-         estabelecimento.
+         O direito a acompanhante deve ser respeitado nos serviços de saúde conforme a
+         legislação aplicável. Se houver restrição, peça a
+         justificativa e orientação à ouvidoria do estabelecimento.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -844,15 +409,17 @@ pública ou privada.
          O que você precisa saber
         </h3>
         <p>
-         Você deve receber informações sobre procedimentos propostos, seus objetivos, riscos e
-alternativas, respeitadas as situações de urgência e as regras aplicáveis.
+         Você deve receber informações sobre procedimentos propostos, seus
+         objetivos, riscos e alternativas, respeitadas as situações de urgência
+         e as regras aplicáveis.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Pergunte o que está sendo recomendado, por quê e se há outras opções. Sempre que possível,
-converse sobre preferências antes do trabalho de parto.
+         Pergunte o que está sendo recomendado, por quê e se há outras
+         opções. Sempre que possível, converse sobre preferências antes
+         do trabalho de parto.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -864,13 +431,13 @@ converse sobre preferências antes do trabalho de parto.
          Para entender melhor
         </h3>
         <p>
-         Peça que expliquem a finalidade de exames vaginais, medicamentos, indução do parto e
-procedimentos cirúrgicos. Sempre que possível, as decisões devem ser compartilhadas e
-registradas de forma adequada.
+         Peça que expliquem a finalidade de exames vaginais, medicamentos,
+         indução do parto e procedimentos cirúrgicos. Sempre que
+         possível, as decisões devem ser compartilhadas e registradas de forma
+         adequada.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -887,15 +454,15 @@ registradas de forma adequada.
          O que você precisa saber
         </h3>
         <p>
-         A assistência deve preservar sua intimidade e oferecer tratamento respeitoso, sem humilhações,
-ameaças ou discriminação.
+         A assistência deve preservar sua intimidade e oferecer tratamento respeitoso, sem
+         humilhações, ameaças ou discriminação.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Você pode pedir privacidade e solicitar a identificação dos profissionais envolvidos no
-         atendimento.
+         Você pode pedir privacidade e solicitar a identificação dos
+         profissionais envolvidos no atendimento.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -907,13 +474,13 @@ ameaças ou discriminação.
          Para entender melhor
         </h3>
         <p>
-         Você pode pedir que informações pessoais sejam tratadas com discrição e que apenas pessoas
-necessárias participem do atendimento. Dúvidas sobre exames, sexualidade e saúde mental também
-merecem acolhimento.
+         Você pode pedir que informações pessoais sejam tratadas com
+         discrição e que apenas pessoas necessárias participem do atendimento.
+         Dúvidas sobre exames, sexualidade e saúde mental também merecem
+         acolhimento.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -930,15 +497,16 @@ merecem acolhimento.
          O que você precisa saber
         </h3>
         <p>
-         O contato pele a pele e o apoio à amamentação são práticas recomendadas quando as condições
-clínicas da pessoa que deu à luz e do bebê permitem.
+         O contato pele a pele e o apoio à amamentação são
+         práticas recomendadas quando as condições clínicas da pessoa
+         que deu à luz e do bebê permitem.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Converse com a equipe sobre suas preferências e sobre eventuais motivos clínicos para adiar
-essas práticas.
+         Converse com a equipe sobre suas preferências e sobre eventuais motivos
+         clínicos para adiar essas práticas.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -950,9 +518,10 @@ essas práticas.
          Para entender melhor
         </h3>
         <p>
-         Após o nascimento, pergunte sobre contato pele a pele, início da amamentação e possíveis razões
-clínicas para adiá-los. Quando houver separação por necessidade de saúde, peça orientações sobre
-como acompanhar o bebê.
+         Após o nascimento, pergunte sobre contato pele a pele, início da
+         amamentação e possíveis razões clínicas para
+         adiá-los. Quando houver separação por necessidade de saúde,
+         peça orientações sobre como acompanhar o bebê.
         </p>
        </div>
       </details>
@@ -973,7 +542,8 @@ como acompanhar o bebê.
       </div>
      </div>
      <p class="introducao-secao">
-      Direitos e cuidados para a recuperação, o vínculo com o bebê e o apoio à amamentação.
+      Direitos e cuidados para a recuperação, o vínculo com o bebê e o
+      apoio à amamentação.
      </p>
      <div class="cartilhas-grade">
       <details class="cartilha">
@@ -992,9 +562,9 @@ como acompanhar o bebê.
          O que você precisa saber
         </h3>
         <p>
-         A atenção à saúde continua após o nascimento. A pessoa no pós-parto deve receber orientações e
-acompanhamento de acordo com suas necessidades, inclusive sobre sinais de alerta e saúde
-emocional.
+         A atenção à saúde continua após o nascimento. A pessoa
+         no pós-parto deve receber orientações e acompanhamento de acordo com
+         suas necessidades, inclusive sobre sinais de alerta e saúde emocional.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1012,13 +582,13 @@ emocional.
          Para entender melhor
         </h3>
         <p>
-         O acompanhamento após o parto deve considerar sangramento, pressão arterial, cicatrização,
-alimentação, saúde emocional e planejamento reprodutivo. Não deixe de buscar ajuda caso apareçam
-sintomas entre as consultas.
+         O acompanhamento após o parto deve considerar sangramento, pressão arterial,
+         cicatrização, alimentação, saúde emocional e
+         planejamento reprodutivo. Não deixe de buscar ajuda caso apareçam sintomas
+         entre as consultas.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1035,8 +605,8 @@ sintomas entre as consultas.
          O que você precisa saber
         </h3>
         <p>
-         Você pode buscar orientação sobre amamentação, pega, dor, dificuldades e alimentação do bebê nos
-serviços de saúde.
+         Você pode buscar orientação sobre amamentação, pega, dor,
+         dificuldades e alimentação do bebê nos serviços de saúde.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1054,12 +624,12 @@ serviços de saúde.
          Para entender melhor
         </h3>
         <p>
-         A equipe pode ajudar a avaliar a pega, a dor, fissuras e o ganho de peso do bebê. Se amamentar
-não for possível, você também merece orientação segura sobre outras formas de alimentação.
+         A equipe pode ajudar a avaliar a pega, a dor, fissuras e o ganho de peso do bebê. Se
+         amamentar não for possível, você também merece
+         orientação segura sobre outras formas de alimentação.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1076,15 +646,16 @@ não for possível, você também merece orientação segura sobre outras formas
          O que você precisa saber
         </h3>
         <p>
-         O planejamento reprodutivo deve respeitar suas escolhas. Você tem direito a informações sobre
-métodos contraceptivos, benefícios, riscos e acesso conforme as regras do serviço.
+         O planejamento reprodutivo deve respeitar suas escolhas. Você tem direito a
+         informações sobre métodos contraceptivos, benefícios, riscos e
+         acesso conforme as regras do serviço.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Converse com a equipe sobre opções adequadas ao seu momento e sobre seu desejo de ter ou não
-outra gestação.
+         Converse com a equipe sobre opções adequadas ao seu momento e sobre seu
+         desejo de ter ou não outra gestação.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -1096,13 +667,13 @@ outra gestação.
          Para entender melhor
         </h3>
         <p>
-         A fertilidade pode retornar antes da primeira menstruação após o parto. Peça informações sobre
-métodos disponíveis, eficácia e compatibilidade com a amamentação, sem pressão para escolher um
-método específico.
+         A fertilidade pode retornar antes da primeira menstruação após o
+         parto. Peça informações sobre métodos disponíveis,
+         eficácia e compatibilidade com a amamentação, sem pressão para
+         escolher um método específico.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1119,15 +690,16 @@ método específico.
          O que você precisa saber
         </h3>
         <p>
-         Sofrimento emocional, ansiedade persistente ou tristeza intensa merecem acolhimento e avaliação.
-O cuidado em saúde mental integra a atenção à saúde.
+         Sofrimento emocional, ansiedade persistente ou tristeza intensa merecem acolhimento e
+         avaliação. O cuidado em saúde mental integra a atenção
+         à saúde.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Fale com a UBS ou serviço de referência. Em situação de risco imediato para você ou outra
-pessoa, procure urgência/emergência.
+         Fale com a UBS ou serviço de referência. Em situação de risco
+         imediato para você ou outra pessoa, procure urgência/emergência.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -1139,9 +711,9 @@ pessoa, procure urgência/emergência.
          Para entender melhor
         </h3>
         <p>
-         Tristeza persistente, ansiedade intensa e sofrimento que prejudica a rotina merecem atendimento.
-A pessoa pode procurar a UBS e solicitar encaminhamento à rede de saúde mental, conforme a
-necessidade.
+         Tristeza persistente, ansiedade intensa e sofrimento que prejudica a rotina merecem
+         atendimento. A pessoa pode procurar a UBS e solicitar encaminhamento à rede de
+         saúde mental, conforme a necessidade.
         </p>
        </div>
       </details>
@@ -1162,7 +734,8 @@ necessidade.
       </div>
      </div>
      <p class="introducao-secao">
-      Garantias que podem variar conforme o vínculo de trabalho e a situação individual.
+      Garantias que podem variar conforme o vínculo de trabalho e a situação
+      individual.
      </p>
      <div class="cartilhas-grade">
       <details class="cartilha">
@@ -1181,40 +754,43 @@ necessidade.
          O que você precisa saber
         </h3>
         <p>
-         Empregadas abrangidas pela CLT têm, em regra, licença-maternidade de 120 dias. Em situações
-específicas, como programas de prorrogação e outros regimes de vínculo, as regras podem ser
-diferentes.
+         Empregadas abrangidas pela CLT têm, em regra, licença-maternidade de 120 dias.
+         Em situações específicas, como programas de prorrogação
+         e outros regimes de vínculo, as regras podem ser diferentes.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Verifique com o RH ou o órgão responsável qual regime se aplica ao seu vínculo e quais
-documentos são necessários.
+         Verifique com o RH ou o órgão responsável qual regime se aplica ao seu
+         vínculo e quais documentos são necessários.
         </div>
         <p class="cartilha-fonte">
          <strong>
           Base de referência:
          </strong>
-         Constituição Federal, art. 7º, XVIII; CLT, art. 392; Lei nº 11.770/2008.
+         Constituição Federal, art. 7º, XVIII; CLT, art. 392; Lei nº
+         11.770/2008.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         As regras e a duração variam conforme o vínculo de trabalho e situações previstas em lei.
-Confirme as condições com o empregador, o RH, o INSS ou o órgão responsável antes de planejar o
-afastamento.
+         As regras e a duração variam conforme o vínculo de trabalho e
+         situações previstas em lei. Confirme as condições com o
+         empregador, o RH, o INSS ou o órgão responsável antes de planejar o
+         afastamento.
         </p>
         <p>
-         O afastamento não é a mesma coisa que o salário-maternidade: a licença diz respeito ao
-         período sem trabalhar, enquanto o benefício ou a remuneração depende do vínculo e das
-         regras aplicáveis. A adoção e algumas situações de internação também têm proteções
-         específicas; confirme seu caso nos canais oficiais.
+         O afastamento não é a mesma coisa que o salário-maternidade: a
+         licença diz respeito ao período sem trabalhar, enquanto o benefício ou
+         a remuneração depende do vínculo e das regras aplicáveis. A
+         adoção e algumas situações de internação
+         também têm proteções específicas; confirme seu caso nos
+         canais oficiais.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1231,36 +807,39 @@ afastamento.
          O que você precisa saber
         </h3>
         <p>
-         Em novembro de 2026, a licença-paternidade geral ainda é de cinco dias. A Lei nº
-         15.371/2026 prevê ampliação gradual: dez dias a partir de janeiro de 2027, quinze em 2028 e
-         vinte a partir de 2029, este último prazo sujeito à condição fiscal prevista na própria
-         lei. O direito também abrange hipóteses de adoção e guarda para fins de adoção, conforme as
-         regras aplicáveis.
+         Em novembro de 2026, a licença-paternidade geral ainda é de cinco dias. A Lei
+         nº 15.371/2026 prevê ampliação gradual: dez dias a partir de
+         janeiro de 2027, quinze em 2028 e vinte a partir de 2029, este último prazo sujeito
+         à condição fiscal prevista na própria lei. O direito
+         também abrange hipóteses de adoção e guarda para fins de
+         adoção, conforme as regras aplicáveis.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Avise o empregador ou setor de pessoal sobre o nascimento ou a adoção e pergunte quais
-         documentos devem ser apresentados. Confirme o prazo correspondente à data do afastamento e
-         ao seu vínculo profissional.
+         Avise o empregador ou setor de pessoal sobre o nascimento ou a adoção e
+         pergunte quais documentos devem ser apresentados. Confirme o prazo correspondente à
+         data do afastamento e ao seu vínculo profissional.
         </div>
         <p class="cartilha-fonte">
          <strong>
           Base de referência:
          </strong>
-         Constituição Federal, art. 7º, XIX; Lei nº 15.371/2026; Lei nº 11.770/2008.
+         Constituição Federal, art. 7º, XIX; Lei nº 15.371/2026; Lei nº
+         11.770/2008.
         </p>
         <h3>
          Para entender melhor
         </h3>
         <p>
-         Empresas participantes do Programa Empresa Cidadã podem oferecer prorrogação de quinze
-         dias, mediante requisitos legais. Servidores públicos e outras categorias podem seguir
-         regras específicas. A nova lei também institui salário-paternidade, com efeitos a partir de
-         2027; verifique as orientações oficiais atualizadas para o seu caso. O afastamento é uma
-         oportunidade para compartilhar os cuidados com o bebê e apoiar a recuperação de quem deu à
-         luz.
+         Empresas participantes do Programa Empresa Cidadã podem oferecer
+         prorrogação de quinze dias, mediante requisitos legais. Servidores
+         públicos e outras categorias podem seguir regras específicas. A nova lei
+         também institui salário-paternidade, com efeitos a partir de 2027; verifique
+         as orientações oficiais atualizadas para o seu caso. O afastamento é
+         uma oportunidade para compartilhar os cuidados com o bebê e apoiar a
+         recuperação de quem deu à luz.
         </p>
         <p>
          <a href="https://www2.camara.leg.br/legin/fed/lei/2026/lei-15371-31-marco-2026-798908-publicacaooriginal-178711-pl.html" rel="noopener noreferrer" target="_blank">
@@ -1270,7 +849,6 @@ afastamento.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1287,15 +865,17 @@ afastamento.
          O que você precisa saber
         </h3>
         <p>
-         Para empregadas abrangidas pela proteção constitucional, é vedada a dispensa arbitrária ou sem
-justa causa desde a confirmação da gravidez até cinco meses após o parto, observadas as regras e
-interpretações aplicáveis.
+         Para empregadas abrangidas pela proteção constitucional, é vedada a
+         dispensa arbitrária ou sem justa causa desde a confirmação da gravidez
+         até cinco meses após o parto, observadas as regras e
+         interpretações aplicáveis.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Se houver ameaça de demissão, guarde documentos e busque orientação jurídica trabalhista.
+         Se houver ameaça de demissão, guarde documentos e busque
+         orientação jurídica trabalhista.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -1307,18 +887,19 @@ interpretações aplicáveis.
          Para entender melhor
         </h3>
         <p>
-         Para trabalhadoras regidas pela CLT, existem garantias específicas durante a gestação e após o
-parto. A aplicação em contratos temporários ou outros vínculos pode exigir orientação
-individual.
+         Para trabalhadoras regidas pela CLT, existem garantias específicas durante a
+         gestação e após o parto. A aplicação em contratos
+         temporários ou outros vínculos pode exigir orientação
+         individual.
         </p>
         <p>
-         Guarde exames, atestados, comunicações com a empresa e documentos do contrato. Se houver
-         dúvida sobre estabilidade, contrato por prazo determinado ou rescisão, procure o sindicato,
-         a Defensoria ou orientação trabalhista individualizada.
+         Guarde exames, atestados, comunicações com a empresa e documentos do
+         contrato. Se houver dúvida sobre estabilidade, contrato por prazo determinado ou
+         rescisão, procure o sindicato, a Defensoria ou orientação trabalhista
+         individualizada.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1335,15 +916,16 @@ individual.
          O que você precisa saber
         </h3>
         <p>
-         Na CLT, a empregada gestante tem direito à dispensa do horário de trabalho pelo tempo necessário
-para, no mínimo, seis consultas médicas e exames complementares.
+         Na CLT, a empregada gestante tem direito à dispensa do horário de trabalho
+         pelo tempo necessário para, no mínimo, seis consultas médicas e exames
+         complementares.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Solicite comprovantes de comparecimento e converse com o setor responsável sobre o procedimento
-de entrega.
+         Solicite comprovantes de comparecimento e converse com o setor responsável sobre o
+         procedimento de entrega.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -1355,12 +937,12 @@ de entrega.
          Para entender melhor
         </h3>
         <p>
-         Guarde declarações de comparecimento e converse sobre como apresentar os documentos no trabalho.
-A CLT prevê dispensa para consultas e exames do pré-natal nas condições legais.
+         Guarde declarações de comparecimento e converse sobre como apresentar os
+         documentos no trabalho. A CLT prevê dispensa para consultas e exames do
+         pré-natal nas condições legais.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1377,14 +959,16 @@ A CLT prevê dispensa para consultas e exames do pré-natal nas condições lega
          O que você precisa saber
         </h3>
         <p>
-         A CLT prevê, até o bebê completar seis meses, dois descansos especiais de meia hora cada durante
-a jornada de trabalho, com possibilidade de extensão do período em situações específicas.
+         A CLT prevê, até o bebê completar seis meses, dois descansos especiais
+         de meia hora cada durante a jornada de trabalho, com possibilidade de extensão do
+         período em situações específicas.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Converse com a empresa sobre como organizar os horários, conforme a legislação aplicável.
+         Converse com a empresa sobre como organizar os horários, conforme a
+         legislação aplicável.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -1396,13 +980,13 @@ a jornada de trabalho, com possibilidade de extensão do período em situações
          Para entender melhor
         </h3>
         <p>
-         A legislação trabalhista estabelece intervalos para amamentação em situações específicas.
-Verifique as condições do seu vínculo e converse sobre a organização da rotina de retorno ao
-trabalho.
+         A legislação trabalhista estabelece intervalos para amamentação
+         em situações específicas. Verifique as condições do seu
+         vínculo e converse sobre a organização da rotina de retorno ao
+         trabalho.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1419,16 +1003,17 @@ trabalho.
          O que você precisa saber
         </h3>
         <p>
-         O salário-maternidade é um benefício previdenciário sujeito a critérios que variam conforme a
-categoria de segurada e a situação concreta. Servidoras públicas e trabalhadoras com outros
-vínculos podem ter regras próprias.
+         O salário-maternidade é um benefício previdenciário sujeito a
+         critérios que variam conforme a categoria de segurada e a situação
+         concreta. Servidoras públicas e trabalhadoras com outros vínculos podem ter
+         regras próprias.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Consulte os canais oficiais do INSS ou o setor de pessoal do seu órgão antes de contar com um
-prazo ou valor específico.
+         Consulte os canais oficiais do INSS ou o setor de pessoal do seu órgão antes
+         de contar com um prazo ou valor específico.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -1440,13 +1025,14 @@ prazo ou valor específico.
          Para entender melhor
         </h3>
         <p>
-         O acesso ao benefício previdenciário depende da categoria de segurada e das regras do INSS. É
-importante verificar cadastro, contribuições e documentação necessária em canais oficiais.
+         O acesso ao benefício previdenciário depende da categoria de segurada e das
+         regras do INSS. É importante verificar cadastro, contribuições e
+         documentação necessária em canais oficiais.
         </p>
         <p>
-         Trabalhadoras autônomas, MEIs, empregadas domésticas e outras seguradas podem ter caminhos
-         de solicitação diferentes. Confira seus dados no Meu INSS e procure atendimento oficial
-         para verificar requisitos e documentos.
+         Trabalhadoras autônomas, MEIs, empregadas domésticas e outras seguradas podem
+         ter caminhos de solicitação diferentes. Confira seus dados no Meu INSS e
+         procure atendimento oficial para verificar requisitos e documentos.
         </p>
        </div>
       </details>
@@ -1486,8 +1072,9 @@ importante verificar cadastro, contribuições e documentação necessária em c
          O que você precisa saber
         </h3>
         <p>
-         Para dificuldades de atendimento na rede pública, a Ouvidoria-Geral do SUS recebe manifestações,
-reclamações e pedidos de informação.
+         Para dificuldades de atendimento na rede pública, a Ouvidoria-Geral do SUS recebe
+         manifestações, reclamações e pedidos de
+         informação.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1505,12 +1092,12 @@ reclamações e pedidos de informação.
          Para entender melhor
         </h3>
         <p>
-         Ao registrar uma manifestação, anote datas, local, serviço, o que aconteceu e o número de
-protocolo. Evite publicar dados sensíveis ou documentos pessoais em redes sociais.
+         Ao registrar uma manifestação, anote datas, local, serviço, o que
+         aconteceu e o número de protocolo. Evite publicar dados sensíveis ou
+         documentos pessoais em redes sociais.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1527,14 +1114,15 @@ protocolo. Evite publicar dados sensíveis ou documentos pessoais em redes socia
          O que você precisa saber
         </h3>
         <p>
-         A Defensoria Pública pode prestar orientação e assistência jurídica gratuita a pessoas que
-preencham os critérios de atendimento.
+         A Defensoria Pública pode prestar orientação e assistência
+         jurídica gratuita a pessoas que preencham os critérios de atendimento.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Procure a Defensoria do seu estado ou a Defensoria Pública da União, conforme o assunto.
+         Procure a Defensoria do seu estado ou a Defensoria Pública da União, conforme
+         o assunto.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -1546,12 +1134,12 @@ preencham os critérios de atendimento.
          Para entender melhor
         </h3>
         <p>
-         A Defensoria Pública pode orientar pessoas que se enquadram nos critérios de atendimento sobre
-acesso à saúde, proteção de direitos e medidas jurídicas cabíveis.
+         A Defensoria Pública pode orientar pessoas que se enquadram nos critérios de
+         atendimento sobre acesso à saúde, proteção de direitos e
+         medidas jurídicas cabíveis.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1568,8 +1156,9 @@ acesso à saúde, proteção de direitos e medidas jurídicas cabíveis.
          O que você precisa saber
         </h3>
         <p>
-         Em situações que envolvam violação de direitos coletivos ou problemas persistentes nos serviços,
-o Ministério Público e órgãos de fiscalização podem ser canais adequados.
+         Em situações que envolvam violação de direitos coletivos ou
+         problemas persistentes nos serviços, o Ministério Público e
+         órgãos de fiscalização podem ser canais adequados.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1587,12 +1176,12 @@ o Ministério Público e órgãos de fiscalização podem ser canais adequados.
          Para entender melhor
         </h3>
         <p>
-         Em situações de violação de direitos, órgãos de fiscalização e proteção podem receber relatos.
-Guarde registros disponíveis e procure o canal correspondente ao tipo de situação.
+         Em situações de violação de direitos, órgãos de
+         fiscalização e proteção podem receber relatos. Guarde registros
+         disponíveis e procure o canal correspondente ao tipo de situação.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
@@ -1609,15 +1198,15 @@ Guarde registros disponíveis e procure o canal correspondente ao tipo de situa�
          O que você precisa saber
         </h3>
         <p>
-         Questões sobre emprego, licença e benefícios podem exigir análise individualizada do vínculo e
-dos documentos.
+         Questões sobre emprego, licença e benefícios podem exigir
+         análise individualizada do vínculo e dos documentos.
         </p>
         <div class="cartilha-perguntas">
          <strong>
           Na prática:
          </strong>
-         Consulte sindicato, assistência jurídica, canais do Ministério do Trabalho ou o INSS,
-         conforme o caso.
+         Consulte sindicato, assistência jurídica, canais do Ministério do
+         Trabalho ou o INSS, conforme o caso.
         </div>
         <p class="cartilha-fonte">
          <strong>
@@ -1629,9 +1218,10 @@ dos documentos.
          Para entender melhor
         </h3>
         <p>
-         Se houver dúvida sobre afastamento, estabilidade, licença ou benefício, identifique primeiro o
-seu vínculo de trabalho. Isso ajuda a encontrar a orientação correta sem aplicar uma regra que
-não corresponde à sua situação.
+         Se houver dúvida sobre afastamento, estabilidade, licença ou
+         benefício, identifique primeiro o seu vínculo de trabalho. Isso ajuda a
+         encontrar a orientação correta sem aplicar uma regra que não
+         corresponde à sua situação.
         </p>
        </div>
       </details>
@@ -1649,12 +1239,11 @@ não corresponde à sua situação.
        Fontes e orientações oficiais
       </h2>
      </div>
-
      <div class="fontes-jornada">
       <p>
-       As informações acima são um panorama educativo da legislação e de diretrizes de saúde
-brasileiras. Para confirmar regras atuais e entender situações individuais, consulte as fontes
-oficiais:
+       As informações acima são um panorama educativo da
+       legislação e de diretrizes de saúde brasileiras. Para confirmar regras
+       atuais e entender situações individuais, consulte as fontes oficiais:
       </p>
       <ul>
        <li>
@@ -1684,21 +1273,23 @@ oficiais:
        </li>
       </ul>
       <p>
-       Regras podem mudar e dependem do contexto, do vínculo profissional e do serviço de saúde. Este
-conteúdo não substitui orientação jurídica ou atendimento de saúde.
+       Regras podem mudar e dependem do contexto, do vínculo profissional e do serviço
+       de saúde. Este conteúdo não substitui orientação
+       jurídica ou atendimento de saúde.
       </p>
      </div>
     </div>
    </section>
-  </main>
 
+  </main>
   <footer class="rodape">
    <div class="container">
     <p class="rodape-logo">
      jornada.
     </p>
     <p>
-     Conteúdo educativo. Não substitui atendimento médico ou orientação jurídica.
+     Conteúdo educativo. Não substitui atendimento médico ou
+     orientação jurídica.
     </p>
    </div>
   </footer>

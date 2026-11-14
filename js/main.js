@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     painel.hidden = !painel.hidden;
     botao.setAttribute('aria-expanded', String(!painel.hidden));
   });
-  
+
   // Fecha o painel com Esc e devolve o foco ao botão de acessibilidade.
   document.addEventListener('keydown', (evento) => {
     if (evento.key === 'Escape' && !painel.hidden) {
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       botao.focus();
     }
   });
-  
+
   painel.querySelectorAll('[data-tamanho]').forEach((item) => {
     item.addEventListener('click', () => {
       localStorage.setItem('jornada-tamanho', item.dataset.tamanho);

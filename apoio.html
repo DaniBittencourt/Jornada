@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
  <head>
   <meta charset="utf-8"/>
@@ -10,468 +11,8 @@
   <link href="css/style.css" rel="stylesheet"/>
   <script defer="" src="js/main.js">
   </script>
-  <style>
-   .pagina-apoio .pagina-apresentacao > .container {
-  position:relative;
-  z-index:2;
-}
-
-.pagina-apoio .pagina-apresentacao .etiqueta {
-  color:var(--verde);
-}
-
-
-
-.pagina-apoio .pagina-apresentacao h1 em {
-  color:var(--argila);
-  font-weight:400;
-}
-
-
-
-.pagina-apoio .ornamento-apoio {
-  position:absolute;
-  top:0;
-  right:0;
-  height:100%;
-  width:49%;
-  max-width:none;
-  object-fit:cover;
-  object-position:center 18%;
-  pointer-events: auto;
-  z-index:1;
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 22%);
-  mask-image:linear-gradient(to right,transparent 0%,black 22%);
-}
-
-.pagina-apoio .navegacao-fases {
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin:0;
-}
-
-.pagina-apoio .navegacao-fases a {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 20px;
-  border:1px solid #C7D0C4;
-  border-radius:30px;
-  background:#fffdf9;
-  color:var(--verde-escuro);
-  font:600 .95rem/1.4 'DM Sans',Arial,sans-serif;
-  text-decoration:none;
-  transition:background .2s,color .2s;
-}
-
-.pagina-apoio .navegacao-fases a:hover {
-  background:var(--verde);
-  color:#fff;
-}
-
-.pagina-apoio .secao-interna {
-  padding:70px 0;
-  scroll-margin-top:25px;
-}
-
-.pagina-apoio .titulo-secao {
-  display:flex;
-  align-items:center;
-  gap:22px;
-  margin-bottom:18px;
-}
-
-.pagina-apoio .numero-secao {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
-  width:68px;
-  height:68px;
-  border-radius:50%;
-  background:var(--verde-claro);
-  color:var(--verde);
-  font:400 1.8rem/1 'DM Serif Display',Georgia,serif;
-}
-
-.pagina-apoio .titulo-secao .etiqueta {
-  margin-bottom:5px;
-  font-size:.75rem;
-  letter-spacing:2px;
-}
-
-.pagina-apoio .titulo-secao h2 {
-  font:400 clamp(2rem,3.5vw,3rem)/1.2 'DM Serif Display',Georgia,serif;
-  color:#402D25;
-}
-
-.pagina-apoio .introducao-secao {
-  max-width:850px;
-  margin:0 0 32px;
-  font-size:1.07rem;
-  line-height:1.85;
-}
-
-.pagina-apoio .cartilhas-grade {
-  display:grid;
-  grid-template-columns:1fr;
-  gap:15px;
-  margin:28px 0;
-}
-
-.pagina-apoio .cartilha {
-  min-width:0;
-  background:#fffdf9;
-  border:1px solid #dce2d7;
-  border-radius:18px;
-  overflow:hidden;
-}
-
-.pagina-apoio .cartilha[open] {
-  border-color:#aabca7;
-}
-
-.pagina-apoio .cartilha-titulo {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  padding:21px 25px;
-  cursor:pointer;
-  list-style:none;
-}
-
-.pagina-apoio .cartilha-titulo::-webkit-details-marker {
-  display:none;
-}
-
-.pagina-apoio .cartilha-titulo > span:first-child {
-  display:flex;
-  align-items:center;
-  gap:17px;
-  min-width:0;
-  flex-wrap:wrap;
-}
-
-.pagina-apoio .cartilha-numero {
-  flex:0 0 43px;
-  width:43px;
-  height:43px;
-  display:grid;
-  place-items:center;
-  border-radius:13px;
-  background:var(--argila-clara);
-  color:#86533f;
-  font:400 1.25rem/1 'DM Serif Display',Georgia,serif;
-}
-
-.pagina-apoio .cartilha-titulo strong {
-  display:block;
-  font:400 1.4rem/1.35 'DM Serif Display',Georgia,serif;
-  color:var(--verde-escuro);
-  margin:0;
-}
-
-.pagina-apoio .cartilha-titulo small {
-  display:block;
-  width:100%;
-  font-size:.9rem;
-  line-height:1.6;
-  color:#6c786d;
-}
-
-.pagina-apoio .cartilha-icone {
-  position:relative;
-  display:grid;
-  place-items:center;
-  flex:0 0 34px;
-  width:34px;
-  height:34px;
-  padding:0;
-  border-radius:50%;
-  background:#e8ede5;
-  color:#536c55;
-  font-size:0;
-  line-height:0;
-  transition:transform .2s;
-}
-
-.pagina-apoio .cartilha-icone::before, .pagina-apoio .cartilha-icone::after {
-  content:"";
-  position:absolute;
-  top:50%;
-  left:50%;
-  background:currentColor;
-  border-radius:2px;
-  transform:translate(-50%,-50%);
-}
-
-.pagina-apoio .cartilha-icone::before {
-  width:14px;
-  height:2px;
-}
-
-.pagina-apoio .cartilha-icone::after {
-  width:2px;
-  height:14px;
-}
-
-.pagina-apoio .cartilha[open] .cartilha-icone {
-  transform:rotate(45deg);
-}
-
-.pagina-apoio .cartilha-conteudo {
-  border-top:1px solid #edf0e9;
-  padding:8px 27px 27px;
-  line-height:1.8;
-  color:#49544a;
-  overflow-wrap:anywhere;
-}
-
-.pagina-apoio .cartilha-conteudo h4 {
-  margin:22px 0 8px;
-  color:#4e6952;
-  font-size:1rem;
-}
-
-.pagina-apoio .cartilha-conteudo p,.pagina-apoio .cartilha-conteudo ul {
-  margin:0 0 14px;
-}
-
-.pagina-apoio .cartilha-conteudo ul {
-  padding-left:22px;
-}
-
-.pagina-apoio .cartilha-conteudo li {
-  margin-bottom:8px;
-}
-
-.pagina-apoio .cartilha-conteudo a,.pagina-apoio .fontes-jornada a {
-  color:#506c55;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-.pagina-apoio .cartilha-alerta {
-  background:#f8ece6;
-  border-left:4px solid #c9917b;
-  padding:14px 16px;
-  border-radius:8px;
-  margin:18px 0;
-}
-
-.pagina-apoio .cartilha-perguntas {
-  background:#edf1e9;
-  padding:16px;
-  border-radius:12px;
-  margin:18px 0;
-}
-
-.pagina-apoio .cartilha-fonte {
-  margin-top:22px;
-  padding-top:14px;
-  border-top:1px solid #e4e9df;
-  font-size:.85rem;
-  color:#68746a;
-}
-
-.pagina-apoio .secao-fontes {
-  padding:65px 0 75px;
-  background:#ecefe8;
-  border-top:1px solid #d6dfd1;
-}
-
-.pagina-apoio .fontes-cabecalho h2 {
-  font:400 clamp(2rem,3.5vw,3rem)/1.2 'DM Serif Display',Georgia,serif;
-  color:var(--verde-escuro);
-}
-
-.pagina-apoio .fontes-jornada {
-  max-width:900px;
-  margin-top:25px;
-  padding:28px;
-  background:#fffdf9;
-  border:1px solid #d6dfd1;
-  border-radius:18px;
-  line-height:1.8;
-}
-
-.pagina-apoio .fontes-jornada ul {
-  padding-left:22px;
-  margin:14px 0;
-}
-
-.pagina-apoio .fontes-jornada li {
-  margin-bottom:12px;
-}
-
-.pagina-apoio .fontes-jornada p + p {
-  margin-top:12px;
-}
-
-.pagina-apoio .sr-only-direitos {
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  white-space:nowrap;
-  border:0;
-}
-
-@media(max-width:1050px) {
-  .pagina-apoio .ornamento-apoio {
-    opacity:.3;
-    right:-110px;
-  }
-
-  .pagina-apoio .pagina-apresentacao h1,
-
-}
-
-@media(max-width:700px) {
-  
-
-  .pagina-apoio .ornamento-apoio {
-    opacity:.13;
-    right:-45%;
-    height:100%;
-  }
-
-  
-
-  
-
-  .pagina-apoio .navegacao-fases {
-    gap:10px;
-  }
-
-  .pagina-apoio .navegacao-fases a {
-    padding:10px 15px;
-    font-size:.9rem;
-  }
-
-  .pagina-apoio .secao-interna {
-    padding:50px 0;
-  }
-
-  .pagina-apoio .titulo-secao {
-    align-items:flex-start;
-    gap:15px;
-  }
-
-  .pagina-apoio .numero-secao {
-    width:52px;
-    height:52px;
-    font-size:1.35rem;
-  }
-
-  .pagina-apoio .cartilha-titulo {
-    padding:18px;
-  }
-
-  .pagina-apoio .cartilha-titulo strong {
-    font-size:1.18rem;
-  }
-
-  .pagina-apoio .cartilha-conteudo {
-    padding:8px 20px 22px;
-  }
-
-  .pagina-apoio .fontes-jornada {
-    padding:20px;
-  }
-
-}
-
-@media(prefers-reduced-motion:reduce) {
-  .pagina-apoio .cartilha-icone,.pagina-apoio .navegacao-fases a {
-    transition:none;
-  }
-
-}
-
-.pagina-apoio .pagina-apresentacao .ornamento-apoio {
-  right:0;
-  opacity:.64;
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 28%);
-  mask-image:linear-gradient(to right,transparent 0%,black 28%);
-}
-
-.pagina-apoio .pagina-apresentacao > .container {
-  pointer-events:none;
-}
-
-.pagina-apoio .pagina-apresentacao .navegacao-fases {
-  pointer-events:auto;
-}
-
-.pagina-apoio .nota-legal {
-  background:#f8ece6;
-  border-left:4px solid #c9917b;
-  border-radius:10px;
-  padding:20px 24px;
-  margin-top:28px;
-  max-width:900px;
-  line-height:1.8;
-}
-
-.pagina-apoio .cartilha-conteudo p + p {
-  margin-top:12px;
-}
-
-.pagina-apoio .cartilha-conteudo strong {
-  color:var(--verde-escuro);
-}
-
-@media(max-width:1050px) {
-  .pagina-apoio .pagina-apresentacao .ornamento-apoio {
-    opacity:.25;
-    right:-100px;
-  }
-
-}
-
-@media(max-width:700px) {
-  .pagina-apoio .pagina-apresentacao .ornamento-apoio {
-    opacity:.12;
-    right:-45%;
-  }
-
-}
-
-  
-
-.pagina-apoio .ornamento-apoio {
-  object-position: center 18%;
-}
-@media (max-width: 760px) {
-  .pagina-apoio .ornamento-apoio {
-    width: 100%;
-    height: 290px;
-    object-fit: cover;
-    object-position: center 16%;
-    opacity: .55;
-  }
-}
-  
-/* Entrada compacta aprovada para apoio. */
-
-.pagina-apoio .pagina-apresentacao .ornamento-apoio { max-height: 100%; }
-@media (max-width: 700px) {
-  
-}
-
-/* Ajuste visual aprovado: cabeçalho interno mais compacto e verde suave mais presente. */
-
-@media (max-width: 700px) {
-  
-}
-  </style>
  </head>
+
  <body class="pagina-apoio">
   <a class="pular-conteudo" href="#conteudo">
    Pular para o conteúdo
@@ -534,7 +75,7 @@
 
   <main id="conteudo">
    <section class="pagina-apresentacao">
-    <img alt="Três mãos próximas de um ramo delicado, representando acolhimento e apoio." class="ornamento-apoio" src="assets/apoio-maos-rede.png" data-descricao="Ilustração de mãos e um ramo delicado, simbolizando apoio." tabindex="0"/>
+    <img alt="Três mãos próximas de um ramo delicado, representando acolhimento e apoio." class="ornamento-apoio" data-descricao="Ilustração de mãos e um ramo delicado, simbolizando apoio." src="assets/apoio-maos-rede.png" tabindex="0"/>
     <div class="container">
      <h1>
       Há apoio em cada passo da
@@ -543,8 +84,8 @@
       </em>
      </h1>
      <p>
-      Receber cuidado também é importante. Encontre orientações sobre rede de apoio, saúde emocional,
-rotina e caminhos para buscar ajuda quando precisar.
+      Receber cuidado também é importante. Encontre orientações sobre
+      rede de apoio, saúde emocional, rotina e caminhos para buscar ajuda quando precisar.
      </p>
      <nav aria-label="Navegar pelos temas de apoio" class="navegacao-fases">
       <a href="#rede">
@@ -585,9 +126,6 @@ rotina e caminhos para buscar ajuda quando precisar.
          <strong>
           Receber a notícia de uma síndrome ou condição genética
          </strong>
-         <small>
-          Informação, acolhimento e tempo para compreender cada situação.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
@@ -595,15 +133,15 @@ rotina e caminhos para buscar ajuda quando precisar.
        <div class="cartilha-conteudo">
         <p>
          Uma suspeita ou diagnóstico pode trazer medo, dúvidas, tristeza,
-      alívio por encontrar respostas ou vários sentimentos ao mesmo tempo.
-      Não existe uma reação obrigatória. Seu bebê continua sendo uma pessoa
-      única, digna de amor, respeito e oportunidades.
+         alívio por encontrar respostas ou vários sentimentos ao mesmo tempo.
+         Não existe uma reação obrigatória. Seu bebê continua
+         sendo uma pessoa única, digna de amor, respeito e oportunidades.
         </p>
         <p>
-         As necessidades variam muito de uma criança para outra, mesmo quando
-      têm a mesma síndrome. Algumas precisam de consultas e terapias
-      frequentes; outras têm demandas diferentes. Evite prever o futuro
-      apenas pelo nome do diagnóstico.
+         As necessidades variam muito de uma criança para outra, mesmo quando têm a
+         mesma síndrome. Algumas precisam de consultas e terapias frequentes; outras
+         têm demandas diferentes. Evite prever o futuro apenas pelo nome do
+         diagnóstico.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -620,7 +158,8 @@ rotina e caminhos para buscar ajuda quando precisar.
            Solicite orientação sobre especialistas e acompanhamento individualizado.
           </li>
           <li>
-           Converse com pessoas de confiança, sem se sentir obrigada a contar a todos imediatamente.
+           Converse com pessoas de confiança, sem se sentir obrigada a contar a todos
+           imediatamente.
           </li>
          </ul>
         </div>
@@ -634,22 +173,19 @@ rotina e caminhos para buscar ajuda quando precisar.
          .
         </p>
         <p>
-         Receber uma notícia inesperada pode despertar medo, dúvidas, tristeza ou esperança ao mesmo
-         tempo. Peça que a equipe explique o que foi confirmado, o que ainda é apenas suspeita e
-         quais profissionais podem acompanhar a família, sem pressionar decisões imediatas.
+         Receber uma notícia inesperada pode despertar medo, dúvidas, tristeza ou
+         esperança ao mesmo tempo. Peça que a equipe explique o que foi confirmado, o
+         que ainda é apenas suspeita e quais profissionais podem acompanhar a família,
+         sem pressionar decisões imediatas.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Onde encontrar apoio e acompanhamento para seu bebê?
          </strong>
-         <small>
-          UBS, equipes especializadas, reabilitação e rede de apoio.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
@@ -657,40 +193,38 @@ rotina e caminhos para buscar ajuda quando precisar.
        <div class="cartilha-conteudo">
         <p>
          Você não precisa descobrir todos os cuidados sozinha. A Unidade Básica
-      de Saúde (UBS) pode ajudar a organizar o acompanhamento da criança e
-      orientar encaminhamentos conforme as necessidades identificadas.
+         de Saúde (UBS) pode ajudar a organizar o acompanhamento da criança e orientar
+         encaminhamentos conforme as necessidades identificadas.
         </p>
         <ul>
          <li>
           <strong>
            Acompanhamento de saúde:
           </strong>
-          consultas de rotina,
-        vacinação, avaliação do desenvolvimento e profissionais especializados
-        quando indicados.
+          consultas de rotina, vacinação, avaliação do desenvolvimento e
+          profissionais especializados quando indicados.
          </li>
          <li>
           <strong>
            Desenvolvimento e reabilitação:
           </strong>
-          conforme cada caso,
-        podem ser indicados fisioterapia, fonoaudiologia, terapia ocupacional
-        e outros cuidados. O SUS conta com uma rede de atenção à pessoa com
-        deficiência e Centros Especializados em Reabilitação (CER).
+          conforme cada caso, podem ser indicados fisioterapia, fonoaudiologia, terapia ocupacional
+          e outros cuidados. O SUS conta com uma rede de atenção à pessoa com
+          deficiência e Centros Especializados em Reabilitação (CER).
          </li>
          <li>
           <strong>
            Família e cotidiano:
           </strong>
-          dividir tarefas, buscar apoio
-        emocional e conhecer famílias com experiências semelhantes pode ajudar.
-        A criança também precisa de brincadeiras, convivência e afeto.
+          dividir tarefas, buscar apoio emocional e conhecer famílias com experiências
+          semelhantes pode ajudar. A criança também precisa de brincadeiras,
+          convivência e afeto.
          </li>
         </ul>
         <p>
          A existência de uma síndrome não significa automaticamente que a
-      criança precise de todas as terapias. O plano de cuidado deve considerar
-      sua saúde, desenvolvimento, contexto e escolhas da família.
+         criança precise de todas as terapias. O plano de cuidado deve considerar sua
+         saúde, desenvolvimento, contexto e escolhas da família.
         </p>
         <p>
          <strong>
@@ -706,31 +240,26 @@ rotina e caminhos para buscar ajuda quando precisar.
          .
         </p>
         <p>
-         A UBS pode coordenar encaminhamentos para pediatria, genética clínica, reabilitação e
-         outros serviços quando indicados. Solicite um plano de acompanhamento por escrito e
-         pergunte quais sinais justificam retorno antecipado.
+         A UBS pode coordenar encaminhamentos para pediatria, genética clínica,
+         reabilitação e outros serviços quando indicados. Solicite um plano de
+         acompanhamento por escrito e pergunte quais sinais justificam retorno antecipado.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como construir uma rede de apoio?
          </strong>
-         <small>
-          Comece pelas pessoas com quem você se sente segura. Uma rede pode incluir familiares, amizades,
-vizinhos, profissionais de saúde e grupos comunitários.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Convide alguém para conversar sobre o que você precisa, sem obrigação de aceitar conselhos
-         ou visitas.
+         Convide alguém para conversar sobre o que você precisa, sem
+         obrigação de aceitar conselhos ou visitas.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -752,35 +281,32 @@ vizinhos, profissionais de saúde e grupos comunitários.
          Para entender melhor
         </h3>
         <p>
-         Apoio também significa dividir tarefas e oferecer descanso, não apenas visitar o bebê. Vale
-combinar antecipadamente quem pode ajudar com transporte, alimentação, consultas ou cuidados com
-outras crianças.
+         Apoio também significa dividir tarefas e oferecer descanso, não apenas
+         visitar o bebê. Vale combinar antecipadamente quem pode ajudar com transporte,
+         alimentação, consultas ou cuidados com outras crianças.
         </p>
         <p>
-         Uma rede não precisa ser grande: uma pessoa de confiança, uma vizinha, um serviço de saúde
-         ou um grupo comunitário já podem fazer diferença. Priorize ajuda concreta e respeitosa, sem
-         cobranças sobre como a família deve viver essa fase.
+         Uma rede não precisa ser grande: uma pessoa de confiança, uma vizinha, um
+         serviço de saúde ou um grupo comunitário já podem fazer
+         diferença. Priorize ajuda concreta e respeitosa, sem cobranças sobre como a
+         família deve viver essa fase.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como pedir ajuda de forma prática?
          </strong>
-         <small>
-          Pedidos específicos facilitam que outras pessoas saibam como contribuir.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Você pode solicitar uma refeição, uma ida à farmácia, companhia em uma consulta ou alguém para
-cuidar de tarefas domésticas.
+         Você pode solicitar uma refeição, uma ida à farmácia,
+         companhia em uma consulta ou alguém para cuidar de tarefas domésticas.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -802,34 +328,32 @@ cuidar de tarefas domésticas.
          Para entender melhor
         </h3>
         <p>
-         Experimente pedidos objetivos: “Você pode me acompanhar à UBS na terça?” ou “Consegue trazer uma
-refeição pronta?”. Pedidos específicos facilitam que as pessoas saibam como colaborar.
+         Experimente pedidos objetivos: “Você pode me acompanhar à UBS na
+         terça?” ou “Consegue trazer uma refeição pronta?”.
+         Pedidos específicos facilitam que as pessoas saibam como colaborar.
         </p>
         <p>
-         Pedidos específicos costumam ser mais fáceis de atender: “você pode trazer uma refeição?”,
-         “pode me acompanhar à consulta?” ou “pode ficar com o bebê enquanto descanso?”. Você não
-         precisa justificar exaustivamente por que precisa de cuidado.
+         Pedidos específicos costumam ser mais fáceis de atender: “você
+         pode trazer uma refeição?”, “pode me acompanhar à
+         consulta?” ou “pode ficar com o bebê enquanto descanso?”.
+         Você não precisa justificar exaustivamente por que precisa de cuidado.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           E quando não tenho apoio familiar?
          </strong>
-         <small>
-          Sua rede não precisa ser formada apenas por parentes. Serviços de saúde, assistência social e
-grupos de convivência também podem oferecer acolhimento.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Uma Unidade Básica de Saúde (UBS) pode orientar sobre serviços disponíveis no seu território.
+         Uma Unidade Básica de Saúde (UBS) pode orientar sobre serviços
+         disponíveis no seu território.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -851,29 +375,26 @@ grupos de convivência também podem oferecer acolhimento.
          Para entender melhor
         </h3>
         <p>
-         A UBS e os serviços socioassistenciais podem ajudar a identificar recursos comunitários. Redes
-de apoio também podem incluir amizades, vizinhos e grupos de convivência.
+         A UBS e os serviços socioassistenciais podem ajudar a identificar recursos
+         comunitários. Redes de apoio também podem incluir amizades, vizinhos e grupos
+         de convivência.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como estabelecer limites sem culpa?
          </strong>
-         <small>
-          Você tem o direito de escolher quem participa de momentos íntimos e de dizer não a visitas ou
-comentários que causem desconforto.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Uma frase simples pode ajudar: “Agradeço o carinho, mas agora precisamos de descanso”.
+         Uma frase simples pode ajudar: “Agradeço o carinho, mas agora precisamos de
+         descanso”.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -892,8 +413,9 @@ comentários que causem desconforto.
          Para entender melhor
         </h3>
         <p>
-         Você pode limitar visitas, horários e exposição do bebê. Frases simples como “Hoje precisamos
-descansar” ajudam a comunicar o que sua família necessita.
+         Você pode limitar visitas, horários e exposição do bebê.
+         Frases simples como “Hoje precisamos descansar” ajudam a comunicar o que sua
+         família necessita.
         </p>
        </div>
       </details>
@@ -934,18 +456,14 @@ descansar” ajudam a comunicar o que sua família necessita.
          <strong>
           É normal sentir emoções contraditórias?
          </strong>
-         <small>
-          Gestação e pós-parto podem reunir alegria, medo, cansaço, irritação e insegurança. Não existe
-uma única maneira correta de sentir.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Se o sofrimento for intenso, persistente ou dificultar sua rotina, vale procurar avaliação
-         profissional.
+         Se o sofrimento for intenso, persistente ou dificultar sua rotina, vale procurar
+         avaliação profissional.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -956,7 +474,8 @@ uma única maneira correta de sentir.
            Converse com alguém de confiança.
           </li>
           <li>
-           Compartilhe suas preocupações no pré-natal ou na consulta pós-parto.
+           Compartilhe suas preocupações no pré-natal ou na consulta
+           pós-parto.
           </li>
          </ul>
         </div>
@@ -964,35 +483,32 @@ uma única maneira correta de sentir.
          Para entender melhor
         </h3>
         <p>
-         Sentir alegria e medo ao mesmo tempo não significa falta de amor. Observe se o sofrimento
-permanece, aumenta ou impede atividades importantes, pois nesses casos é adequado buscar ajuda.
+         Sentir alegria e medo ao mesmo tempo não significa falta de amor. Observe se o
+         sofrimento permanece, aumenta ou impede atividades importantes, pois nesses casos é
+         adequado buscar ajuda.
         </p>
         <p>
-         É possível amar o bebê e, ao mesmo tempo, sentir cansaço, irritação ou saudade da vida
-         anterior. Esses sentimentos não definem seu valor como mãe ou cuidadora. Se estiverem
-         intensos, persistentes ou dificultarem a rotina, vale buscar avaliação.
+         É possível amar o bebê e, ao mesmo tempo, sentir cansaço,
+         irritação ou saudade da vida anterior. Esses sentimentos não definem
+         seu valor como mãe ou cuidadora. Se estiverem intensos, persistentes ou dificultarem
+         a rotina, vale buscar avaliação.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como reconhecer que preciso de apoio profissional?
          </strong>
-         <small>
-          Tristeza persistente, ansiedade intensa, desesperança, dificuldade importante para dormir mesmo
-quando há oportunidade ou perda de interesse nas atividades são motivos para buscar ajuda.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Profissionais da UBS podem fazer uma primeira avaliação e orientar o encaminhamento à rede de
-saúde mental.
+         Profissionais da UBS podem fazer uma primeira avaliação e orientar o
+         encaminhamento à rede de saúde mental.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1011,22 +527,19 @@ saúde mental.
          Para entender melhor
         </h3>
         <p>
-         A equipe pode avaliar sintomas, sono, alimentação, rede de apoio e possíveis condições de saúde
-mental. Pedir ajuda cedo costuma facilitar o cuidado.
+         A equipe pode avaliar sintomas, sono, alimentação, rede de apoio e
+         possíveis condições de saúde mental. Pedir ajuda cedo costuma
+         facilitar o cuidado.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
-          Qual é a diferença entre tristeza passageira e depressão pós-parto?
+          Qual é a diferença entre tristeza passageira e depressão
+          pós-parto?
          </strong>
-         <small>
-          Oscilações emocionais leves nos primeiros dias após o nascimento podem ocorrer. Já sintomas
-intensos ou persistentes, especialmente por mais de duas semanas, precisam de avaliação.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
@@ -1041,11 +554,12 @@ intensos ou persistentes, especialmente por mais de duas semanas, precisam de av
          </strong>
          <ul>
           <li>
-           Se você sente que não está conseguindo lidar, procure atendimento mesmo antes de duas semanas.
+           Se você sente que não está conseguindo lidar, procure atendimento
+           mesmo antes de duas semanas.
           </li>
           <li>
-           Se houver risco imediato de ferir a si mesma ou a outra pessoa, procure emergência ou
-           ligue 192.
+           Se houver risco imediato de ferir a si mesma ou a outra pessoa, procure emergência
+           ou ligue 192.
           </li>
          </ul>
         </div>
@@ -1053,28 +567,24 @@ intensos ou persistentes, especialmente por mais de duas semanas, precisam de av
          Para entender melhor
         </h3>
         <p>
-         O baby blues tende a melhorar em até duas semanas. Depressão pós-parto pode causar tristeza
-persistente, perda de interesse, culpa excessiva e dificuldade para realizar tarefas.
+         O baby blues tende a melhorar em até duas semanas. Depressão pós-parto
+         pode causar tristeza persistente, perda de interesse, culpa excessiva e dificuldade para
+         realizar tarefas.
         </p>
         <p>
-         Oscilações emocionais nos primeiros dias podem acontecer, mas tristeza persistente,
-         desesperança, ansiedade intensa ou perda de interesse merecem acolhimento profissional. Se
-         houver pensamentos de se machucar ou machucar o bebê, procure ajuda imediata e não fique
-         sozinha.
+         Oscilações emocionais nos primeiros dias podem acontecer, mas tristeza
+         persistente, desesperança, ansiedade intensa ou perda de interesse merecem
+         acolhimento profissional. Se houver pensamentos de se machucar ou machucar o bebê,
+         procure ajuda imediata e não fique sozinha.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Onde buscar acolhimento emocional?
          </strong>
-         <small>
-          Você pode começar pela UBS, que integra a rede do SUS. Dependendo da necessidade, pode haver
-encaminhamento para outros serviços, como CAPS.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
@@ -1100,21 +610,18 @@ encaminhamento para outros serviços, como CAPS.
          Para entender melhor
         </h3>
         <p>
-         Você pode procurar a UBS, pedir avaliação e solicitar informações sobre psicologia ou serviços
-especializados. O acesso depende da organização da rede local.
+         Você pode procurar a UBS, pedir avaliação e solicitar
+         informações sobre psicologia ou serviços especializados. O acesso
+         depende da organização da rede local.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Baby blues e depressão pós-parto
          </strong>
-         <small>
-          Entenda as diferenças e quando buscar atendimento
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1125,24 +632,25 @@ especializados. O acesso depende da organização da rede local.
          O que é baby blues?
         </h3>
         <p>
-         Choro fácil, irritabilidade e oscilações de humor podem aparecer nos primeiros dias após o parto
-e geralmente melhoram em até duas semanas. Apoio e descanso ajudam, mas sofrimento intenso
-merece atenção.
+         Choro fácil, irritabilidade e oscilações de humor podem aparecer nos
+         primeiros dias após o parto e geralmente melhoram em até duas semanas. Apoio
+         e descanso ajudam, mas sofrimento intenso merece atenção.
         </p>
         <h3>
          E a depressão pós-parto?
         </h3>
         <p>
-         Pode causar tristeza persistente, perda de interesse, culpa, desesperança, ansiedade ou
-dificuldade para realizar tarefas. Não é falta de amor nem fraqueza. Há tratamentos, como
-psicoterapia e medicamentos avaliados individualmente.
+         Pode causar tristeza persistente, perda de interesse, culpa, desesperança, ansiedade
+         ou dificuldade para realizar tarefas. Não é falta de amor nem fraqueza.
+         Há tratamentos, como psicoterapia e medicamentos avaliados individualmente.
         </p>
         <h3>
          Quando é urgente?
         </h3>
         <p>
-         Pensamentos de suicídio ou de machucar a si mesma ou o bebê, delírios, alucinações ou confusão
-intensa exigem atendimento de emergência. No Brasil, acione o SAMU 192 se houver risco imediato.
+         Pensamentos de suicídio ou de machucar a si mesma ou o bebê, delírios,
+         alucinações ou confusão intensa exigem atendimento de
+         emergência. No Brasil, acione o SAMU 192 se houver risco imediato.
         </p>
         <p class="cartilha-fonte">
          Referência institucional:
@@ -1156,21 +664,17 @@ intensa exigem atendimento de emergência. No Brasil, acione o SAMU 192 se houve
         </h3>
         <p>
          Se os sintomas forem intensos, persistirem por mais de duas semanas ou houver dificuldade
-importante para cuidar de si, procure avaliação. Confusão, alucinações ou risco de autolesão
-exigem urgência.
+         importante para cuidar de si, procure avaliação. Confusão,
+         alucinações ou risco de autolesão exigem urgência.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Ansiedade e depressão durante a gestação
          </strong>
-         <small>
-          Sinais que merecem escuta e cuidado
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1181,16 +685,18 @@ exigem urgência.
          O que observar?
         </h3>
         <p>
-         Preocupação difícil de controlar, tristeza persistente, medo intenso, perda de interesse e
-sintomas que atrapalham sono, alimentação ou rotina podem indicar necessidade de avaliação. Nem
-todo sofrimento emocional se explica por hormônios.
+         Preocupação difícil de controlar, tristeza persistente, medo intenso,
+         perda de interesse e sintomas que atrapalham sono, alimentação ou rotina
+         podem indicar necessidade de avaliação. Nem todo sofrimento emocional se
+         explica por hormônios.
         </p>
         <h3>
          Como pedir ajuda?
         </h3>
         <p>
-         Você pode dizer à equipe: “Tenho me sentido muito preocupada e isso está afetando minha rotina”.
-A UBS pode orientar avaliação e encaminhamento conforme a necessidade.
+         Você pode dizer à equipe: “Tenho me sentido muito preocupada e isso
+         está afetando minha rotina”. A UBS pode orientar avaliação e
+         encaminhamento conforme a necessidade.
         </p>
         <p class="cartilha-fonte">
          Referência institucional:
@@ -1203,22 +709,18 @@ A UBS pode orientar avaliação e encaminhamento conforme a necessidade.
          Para entender melhor
         </h3>
         <p>
-         A ansiedade pode se manifestar como preocupação constante, medo intenso ou dificuldade de
-dormir; a depressão pode envolver perda de interesse e desesperança. Tratamentos são
-individualizados e podem incluir psicoterapia.
+         A ansiedade pode se manifestar como preocupação constante, medo intenso ou
+         dificuldade de dormir; a depressão pode envolver perda de interesse e
+         desesperança. Tratamentos são individualizados e podem incluir psicoterapia.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Onde procurar ajuda emocional?
          </strong>
-         <small>
-          UBS, rede de saúde mental e urgências
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
          +
@@ -1229,16 +731,16 @@ individualizados e podem incluir psicoterapia.
          Por onde começar?
         </h3>
         <p>
-         A UBS é porta de entrada para conversar sobre ansiedade, tristeza, medo e outras dificuldades.
-Conforme a situação, a rede pode oferecer acompanhamento e encaminhamento aos CAPS ou outros
-serviços.
+         A UBS é porta de entrada para conversar sobre ansiedade, tristeza, medo e outras
+         dificuldades. Conforme a situação, a rede pode oferecer acompanhamento e
+         encaminhamento aos CAPS ou outros serviços.
         </p>
         <h3>
          E em uma crise?
         </h3>
         <p>
-         Em risco imediato, procure emergência ou ligue 192. O CVV oferece apoio emocional pelo 188, mas
-não substitui atendimento de urgência.
+         Em risco imediato, procure emergência ou ligue 192. O CVV oferece apoio emocional
+         pelo 188, mas não substitui atendimento de urgência.
         </p>
         <p class="cartilha-fonte">
          Referência institucional:
@@ -1251,13 +753,15 @@ não substitui atendimento de urgência.
          Para entender melhor
         </h3>
         <p>
-         No SUS, comece pela UBS. Em situações de urgência, procure UPA ou emergência. Para risco
-imediato, ligue 192. O CVV atende pelo 188 para escuta emocional.
+         No SUS, comece pela UBS. Em situações de urgência, procure UPA ou
+         emergência. Para risco imediato, ligue 192. O CVV atende pelo 188 para escuta
+         emocional.
         </p>
         <p>
-         A UBS é uma porta de entrada para avaliação e encaminhamento na rede de saúde mental. Em
-         situação de risco imediato, procure uma UPA ou serviço de emergência; para conversar em
-         momentos de sofrimento, o CVV atende pelo 188.
+         A UBS é uma porta de entrada para avaliação e encaminhamento na rede
+         de saúde mental. Em situação de risco imediato, procure uma UPA ou
+         serviço de emergência; para conversar em momentos de sofrimento, o CVV atende
+         pelo 188.
         </p>
        </div>
       </details>
@@ -1278,7 +782,8 @@ imediato, ligue 192. O CVV atende pelo 188 para escuta emocional.
       </div>
      </div>
      <p class="introducao-secao">
-      Descanso, alimentação e divisão de tarefas ajudam a tornar a rotina mais possível.
+      Descanso, alimentação e divisão de tarefas ajudam a tornar a rotina mais
+      possível.
      </p>
      <div class="cartilhas-grade">
       <details class="cartilha">
@@ -1287,10 +792,6 @@ imediato, ligue 192. O CVV atende pelo 188 para escuta emocional.
          <strong>
           Como dividir os cuidados com o bebê?
          </strong>
-         <small>
-          Sempre que possível, compartilhe tarefas de higiene, organização, alimentação da família e
-acompanhamento de consultas.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
@@ -1316,35 +817,32 @@ acompanhamento de consultas.
          Para entender melhor
         </h3>
         <p>
-         Divida também as tarefas invisíveis: agendar consultas, conferir vacinas, preparar roupas e
-acompanhar a alimentação do bebê. Isso evita concentrar toda a responsabilidade em uma pessoa.
+         Divida também as tarefas invisíveis: agendar consultas, conferir vacinas,
+         preparar roupas e acompanhar a alimentação do bebê. Isso evita
+         concentrar toda a responsabilidade em uma pessoa.
         </p>
         <p>
-         Compartilhar cuidado inclui alimentação quando possível, trocas, banho, consultas, tarefas
-         domésticas e atenção à pessoa que se recupera do parto. Faça combinados realistas e revise
-         a divisão quando a rotina mudar.
+         Compartilhar cuidado inclui alimentação quando possível, trocas,
+         banho, consultas, tarefas domésticas e atenção à pessoa que se
+         recupera do parto. Faça combinados realistas e revise a divisão quando a
+         rotina mudar.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como organizar visitas no pós-parto?
          </strong>
-         <small>
-          Visitas devem respeitar o descanso, a recuperação e as preferências da família. Você pode
-limitar horários, duração e quantidade de pessoas.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Quem visita também pode contribuir levando uma refeição ou ajudando com tarefas, sem exigir que
-a pessoa no pós-parto receba ou entretenha convidados.
+         Quem visita também pode contribuir levando uma refeição ou ajudando
+         com tarefas, sem exigir que a pessoa no pós-parto receba ou entretenha convidados.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1363,30 +861,25 @@ a pessoa no pós-parto receba ou entretenha convidados.
          Para entender melhor
         </h3>
         <p>
-         Combine visitas curtas e respeite o sono da família. Pessoas doentes devem adiar o contato com o
-recém-nascido; higiene das mãos é importante.
+         Combine visitas curtas e respeite o sono da família. Pessoas doentes devem adiar o
+         contato com o recém-nascido; higiene das mãos é importante.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           O que fazer quando estou muito cansada?
          </strong>
-         <small>
-          O cansaço pode se acumular. Tente identificar momentos possíveis de descanso e peça a alguém
-para assumir tarefas não essenciais.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Se houver exaustão extrema, tontura, fraqueza intensa ou sintomas emocionais importantes,
-procure avaliação de saúde.
+         Se houver exaustão extrema, tontura, fraqueza intensa ou sintomas emocionais
+         importantes, procure avaliação de saúde.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1405,28 +898,26 @@ procure avaliação de saúde.
          Para entender melhor
         </h3>
         <p>
-         Sono insuficiente pode intensificar irritabilidade e ansiedade. Se houver exaustão extrema,
-desmaios, tristeza persistente ou incapacidade de descansar mesmo com ajuda, procure avaliação.
+         Sono insuficiente pode intensificar irritabilidade e ansiedade. Se houver exaustão
+         extrema, desmaios, tristeza persistente ou incapacidade de descansar mesmo com ajuda,
+         procure avaliação.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Como acolher alguém que acabou de ter um bebê?
          </strong>
-         <small>
-          Ouça antes de aconselhar. Pergunte o que seria útil e respeite as escolhas da pessoa.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Oferecer presença sem julgamentos costuma ser mais valioso do que comparar experiências.
+         Oferecer presença sem julgamentos costuma ser mais valioso do que comparar
+         experiências.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1445,8 +936,8 @@ desmaios, tristeza persistente ou incapacidade de descansar mesmo com ajuda, pro
          Para entender melhor
         </h3>
         <p>
-         Evite comparações ou cobranças. Ofereça ajuda concreta, escute e pergunte antes de tocar no bebê
-ou dar conselhos.
+         Evite comparações ou cobranças. Ofereça ajuda concreta, escute
+         e pergunte antes de tocar no bebê ou dar conselhos.
         </p>
        </div>
       </details>
@@ -1476,17 +967,14 @@ ou dar conselhos.
          <strong>
           Unidade Básica de Saúde (UBS)
          </strong>
-         <small>
-          É uma porta de entrada para pré-natal, acompanhamento pós-parto, vacinação, orientações e
-avaliação de saúde física e emocional.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         Procure a UBS mais próxima para saber quais atendimentos estão disponíveis.
+         Procure a UBS mais próxima para saber quais atendimentos estão
+         disponíveis.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1494,8 +982,8 @@ avaliação de saúde física e emocional.
          </strong>
          <ul>
           <li>
-           Leve documentos e cartão do SUS, se tiver; a ausência deles não deve impedir atendimento
-           de urgência.
+           Leve documentos e cartão do SUS, se tiver; a ausência deles não deve
+           impedir atendimento de urgência.
           </li>
          </ul>
         </div>
@@ -1503,37 +991,33 @@ avaliação de saúde física e emocional.
          Para entender melhor
         </h3>
         <p>
-         Na UBS é possível solicitar acompanhamento de gestação, puerpério, vacinação, puericultura e
-avaliação inicial de saúde mental. Leve o cartão do SUS, se tiver, mas procure orientação mesmo
-sem ele.
+         Na UBS é possível solicitar acompanhamento de gestação,
+         puerpério, vacinação, puericultura e avaliação inicial
+         de saúde mental. Leve o cartão do SUS, se tiver, mas procure
+         orientação mesmo sem ele.
         </p>
         <p>
-         A UBS pode orientar sobre pré-natal, puerpério, vacinação, saúde mental, planejamento
-         reprodutivo e encaminhamentos. Leve documentos e cadernetas de saúde quando disponíveis,
-         mas não deixe de buscar atendimento urgente por falta deles.
+         A UBS pode orientar sobre pré-natal, puerpério, vacinação,
+         saúde mental, planejamento reprodutivo e encaminhamentos. Leve documentos e
+         cadernetas de saúde quando disponíveis, mas não deixe de buscar
+         atendimento urgente por falta deles.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           CRAS e assistência social
          </strong>
-         <small>
-          O Centro de Referência de Assistência Social (CRAS) orienta famílias sobre serviços e
-          benefícios
-socioassistenciais, conforme critérios locais.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
        </summary>
        <div class="cartilha-conteudo">
         <p>
-         É um ponto de apoio especialmente útil quando há dificuldades financeiras ou fragilidade na rede
-familiar.
+         É um ponto de apoio especialmente útil quando há dificuldades
+         financeiras ou fragilidade na rede familiar.
         </p>
         <div class="cartilha-perguntas">
          <strong>
@@ -1549,23 +1033,17 @@ familiar.
          Para entender melhor
         </h3>
         <p>
-         O CRAS pode orientar sobre serviços e benefícios socioassistenciais, conforme critérios de
-acesso. Verifique a unidade de referência no território.
+         O CRAS pode orientar sobre serviços e benefícios socioassistenciais, conforme
+         critérios de acesso. Verifique a unidade de referência no território.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Situações de violência ou ameaça
          </strong>
-         <small>
-          Se você sofre violência, não precisa enfrentar isso sozinha. A Central de Atendimento à
-          Mulher —
-Ligue 180 — oferece orientação e informações sobre serviços de proteção no Brasil.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
@@ -1591,22 +1069,18 @@ Ligue 180 — oferece orientação e informações sobre serviços de proteção
          Para entender melhor
         </h3>
         <p>
-         Se houver ameaça ou violência, priorize sua segurança. A rede de saúde, assistência social e
-proteção pode orientar medidas adequadas; em perigo imediato, acione a emergência.
+         Se houver ameaça ou violência, priorize sua segurança. A rede de
+         saúde, assistência social e proteção pode orientar medidas
+         adequadas; em perigo imediato, acione a emergência.
         </p>
        </div>
       </details>
-
       <details class="cartilha">
        <summary class="cartilha-titulo">
         <span>
          <strong>
           Quando procurar ajuda urgente?
          </strong>
-         <small>
-          Busque atendimento imediato em caso de falta de ar, dor forte no peito, sangramento intenso,
-convulsões, desmaio, pensamentos de autoagressão ou risco de machucar alguém.
-         </small>
         </span>
         <span aria-hidden="true" class="cartilha-icone">
         </span>
@@ -1632,8 +1106,9 @@ convulsões, desmaio, pensamentos de autoagressão ou risco de machucar alguém.
          Para entender melhor
         </h3>
         <p>
-         Sangramento intenso, falta de ar, dor no peito, convulsões e pensamentos de autolesão com risco
-imediato exigem avaliação urgente. Não espere uma consulta agendada.
+         Sangramento intenso, falta de ar, dor no peito, convulsões e pensamentos de
+         autolesão com risco imediato exigem avaliação urgente. Não
+         espere uma consulta agendada.
         </p>
        </div>
       </details>
@@ -1653,11 +1128,11 @@ imediato exigem avaliação urgente. Não espere uma consulta agendada.
        </h2>
       </div>
      </div>
-
      <div class="fontes-jornada">
       <p>
-       As orientações são educativas e se referem principalmente à rede de atendimento brasileira. Para
-informações atualizadas, consulte os canais oficiais:
+       As orientações são educativas e se referem principalmente à rede
+       de atendimento brasileira. Para informações atualizadas, consulte os canais
+       oficiais:
       </p>
       <ul>
        <li>
@@ -1689,14 +1164,14 @@ informações atualizadas, consulte os canais oficiais:
        <strong>
         Em caso de emergência no Brasil:
        </strong>
-       SAMU 192; Polícia Militar 190. Este site não substitui atendimento de saúde ou apoio
-profissional individualizado.
+       SAMU 192; Polícia Militar 190. Este site não substitui atendimento de
+       saúde ou apoio profissional individualizado.
       </p>
      </div>
     </div>
    </section>
-  </main>
 
+  </main>
   <footer class="rodape">
    <div class="container">
     <p class="rodape-logo">
