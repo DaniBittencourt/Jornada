@@ -812,8 +812,9 @@
   aparece=normalizar(item.textContent).includes(termo);item.hidden=!aparece;item.style.display=aparece?'':'none';if(aparece)total++});
   secoes.forEach(secao=>{const
   visiveis=[...secao.querySelectorAll('[data-pergunta]')].some(item=>!item.hidden);secao.hidden=!visiveis;secao.style.display=visiveis?'':'none'});
-  status.textContent=termo?(total===1?'1 pergunta encontrada.':total+' perguntas
-  encontradas.'):(itens.length+' perguntas disponíveis.');
+      status.textContent = termo
+      ? (total === 1 ? '1 pergunta encontrada.' : total + ' perguntas encontradas.')
+      : (itens.length + ' perguntas disponíveis.');
  });
 })();
   </script>

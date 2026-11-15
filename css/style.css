@@ -192,6 +192,12 @@ summary:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  background: linear-gradient(
+    110deg,
+    #DCE5D8 0%,
+    #E3E9DE 55%,
+    #F3E4D9 100%
+  );
 }
 
 .hero-conteudo {
@@ -248,7 +254,7 @@ summary:focus-visible {
   max-height: none;
   object-fit: contain;
   object-position: center right;
-  opacity: 0.22;
+  opacity: 0.82;
   transform: none;
   pointer-events: none;
   -webkit-mask-image: linear-gradient(
@@ -2773,9 +2779,6 @@ body.pagina-fases .cartilha-titulo strong {
   mask-image:linear-gradient(to right,transparent 0%,black 28%);
 }
 
-.pagina-apoio .pagina-apresentacao > .container {
-}
-
 .pagina-apoio .pagina-apresentacao .navegacao-fases {
   pointer-events:auto;
 }
@@ -3465,16 +3468,16 @@ main > section.secao-interna.secao-fundo {
     opacity: 0.82;
     transform: none;
     pointer-events: none;
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      black 65%
-    );
-    mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      black 65%
-    );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.25) 0%,
+    black 65%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.25) 0%,
+    black 65%
+  );
   }
 
   /*Botões da página inicial lado a lado*/
