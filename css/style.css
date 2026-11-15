@@ -3333,3 +3333,166 @@ main > section.secao-interna.secao-fundo {
     padding-left: 12px;
   }
 }
+
+/* ajustes para mobile*/
+@media (max-width: 700px) {
+
+  /*Cabeçalho mais compacto*/
+
+  .cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 0;
+    min-height: auto;
+  }
+
+  .cabecalho .logo {
+    margin: 0;
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  /*Menu em uma linha com rolagem horizontal*/
+
+  .cabecalho .menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 4px 14px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cabecalho .menu a {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  .cabecalho .menu::after {
+    display: none;
+  }
+
+  .cabecalho .botao-acessibilidade {
+    margin: 0;
+    padding: 9px 16px;
+    font-size: 0.85rem;
+  }
+
+  /*presentações das páginas internas*/
+  .pagina-fases .pagina-apresentacao,
+  .pagina-direitos .pagina-apresentacao,
+  .pagina-duvidas .pagina-apresentacao,
+  .pagina-apoio .pagina-apresentacao,
+  .pagina-perda .pagina-apresentacao {
+    display: block;
+    position: relative;
+    height: auto;
+    min-height: 0;
+    padding: 55px 0;
+    overflow: hidden;
+    isolation: isolate;
+    background: linear-gradient(
+      115deg,
+      #E5E8DD 0%,
+      #E9EADF 55%,
+      #F3E4D9 100%
+    );
+  }
+
+  /*Texto sempre acima da ilustração*/
+  .pagina-apresentacao > .container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
+  /*Ilustrações mescladas ao fundo*/
+  .pagina-fases .ornamento-botanico,
+  .pagina-direitos .ornamento-direitos,
+  .pagina-duvidas .ilustracao-duvidas,
+  .pagina-apoio .ornamento-apoio,
+  .pagina-perda .ornamento-perda {
+    position: absolute;
+    top: 50%;
+    right: -18%;
+    bottom: auto;
+    left: auto;
+    display: block;
+    width: 85%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    object-fit: contain;
+    object-position: center right;
+    opacity: 0.18;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 55%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 55%
+    );
+  }
+
+  /*Dúvidas*/
+  .pagina-duvidas .pagina-apresentacao {
+    display: block;
+  }
+
+  .pagina-duvidas .pagina-apresentacao
+  .ilustracao-duvidas {
+    position: absolute;
+    top: 50%;
+    right: -18%;
+    width: 85%;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    transform: translateY(-50%);
+  }
+
+  /*Títulos e textos*/
+
+  .pagina-apresentacao h1 {
+    position: relative;
+    z-index: 2;
+    line-height: 1.15;
+  }
+
+  .pagina-apresentacao p {
+    position: relative;
+    z-index: 2;
+    line-height: 1.7;
+  }
+
+  /*Navegação das fases*/
+  .navegacao-fases {
+    position: relative;
+    z-index: 2;
+    gap: 10px;
+  }
+
+  .navegacao-fases a {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+}
