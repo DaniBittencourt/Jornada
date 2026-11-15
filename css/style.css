@@ -94,6 +94,8 @@ summary:focus-visible {
 
 .logo span {
   color: var(--argila);
+  margin-left: -0.08em;
+  letter-spacing: 0;
 }
 
 .menu {
