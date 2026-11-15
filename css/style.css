@@ -3481,7 +3481,7 @@ main > section.secao-interna.secao-fundo {
     max-width: none;
     max-height: none;
     object-fit: cover;
-    object-position: 15% center;
+    object-position: 10% center;
     opacity: 0.20;
     transform: none;
     pointer-events: none;
