@@ -3288,8 +3288,6 @@ main > section.secao-interna.secao-fundo {
   background-color: var(--jornada-verde-suave);
 }
 
-
-.secao-busca { background-color: var(--verde-claro); }
 #sobre { background-color: var(--creme); }
 #explorar { background-color: var(--jornada-verde-nevoa); }
 #como-usar { background-color: var(--argila-clara); }
