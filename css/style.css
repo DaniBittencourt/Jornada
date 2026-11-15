@@ -3586,7 +3586,7 @@ main > section.secao-interna.secao-fundo {
   margin: 0;
   object-fit: contain;
   object-position: center;
-  opacity: 0.24;
+  opacity: 1;
   transform: translate(50%, -50%);
   pointer-events: none;
   z-index: 0;
