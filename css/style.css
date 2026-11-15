@@ -3570,7 +3570,7 @@ main > section.secao-interna.secao-fundo {
   }
 
   
-/* Ajuste ilustrações de Direitos e Apoio mobile */
+/** Ajuste ilustrações de Direitos e Apoio mobile */
 .pagina-direitos .ornamento-direitos,
 .pagina-apoio .ornamento-apoio {
   position: absolute;
@@ -3590,8 +3590,8 @@ main > section.secao-interna.secao-fundo {
   transform: translate(50%, -50%);
   pointer-events: none;
   z-index: 0;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 55%);
-  mask-image: linear-gradient(to right, transparent 0%, black 55%);
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
   .pagina-apresentacao h1,
