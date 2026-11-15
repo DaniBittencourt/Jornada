@@ -195,8 +195,9 @@ summary:focus-visible {
   background: linear-gradient(
   110deg,
   #E5E8DD 0%,
-  #E9EDE5 55%,
-  #F3E4D9 100%
+  #E9EDE5 38%,
+  #F3E4D9 72%,
+  #F0DCCB 100%
 );
 }
 
@@ -972,7 +973,7 @@ summary:focus-visible {
 /*Pesquisa do Jornada*/
 .secao-busca {
   padding: 65px 0;
-  background: #F5F6EF;
+  background: #FAFAF5;
 }
 
 .busca-conteudo {
