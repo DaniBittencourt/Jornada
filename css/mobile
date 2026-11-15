@@ -3386,11 +3386,12 @@ main > section.secao-interna.secao-fundo {
   }
 
   /* Imagem da página inicial atrás do texto */
-  .hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-  }
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--creme);
+}
 
   .hero-conteudo {
     position: relative;
