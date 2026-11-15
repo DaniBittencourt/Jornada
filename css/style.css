@@ -3470,17 +3470,17 @@ main > section.secao-interna.secao-fundo {
     max-height: none;
     object-fit: cover;
     object-position: 65% center;
-    opacity: 0.82;
+    opacity: 0.22;
     transform: none;
     pointer-events: none;
   -webkit-mask-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.25) 0%,
+    transparent 0%,,
     black 65%
   );
   mask-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.25) 0%,
+    transparent 0%,
     black 65%
   );
   }
