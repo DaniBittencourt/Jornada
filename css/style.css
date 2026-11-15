@@ -3482,7 +3482,7 @@ main > section.secao-interna.secao-fundo {
     max-height: none;
     object-fit: cover;
     object-position: 10% center;
-    opacity: 0.20;
+    opacity: 0.24;
     transform: none;
     pointer-events: none;
   -webkit-mask-image: linear-gradient(
@@ -3581,14 +3581,14 @@ main > section.secao-interna.secao-fundo {
   bottom: auto;
   left: auto;
   display: block;
-  width: 95%;
+  width: 100%;
   height: 100%;
   max-width: none;
   max-height: none;
   margin: 0;
   object-fit: contain;
   object-position: center;
-  opacity: 0.24;
+  opacity: 0.20;
   transform: translate(50%, -50%);
   pointer-events: none;
   z-index: 0;
