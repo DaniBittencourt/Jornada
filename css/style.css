@@ -193,11 +193,11 @@ summary:focus-visible {
   isolation: isolate;
   overflow: hidden;
   background: linear-gradient(
-    110deg,
-    #DCE5D8 0%,
-    #E3E9DE 55%,
-    #F3E4D9 100%
-  );
+  110deg,
+  #E5E8DD 0%,
+  #E9EDE5 55%,
+  #F3E4D9 100%
+);
 }
 
 .hero-conteudo {
@@ -972,7 +972,7 @@ summary:focus-visible {
 /*Pesquisa do Jornada*/
 .secao-busca {
   padding: 65px 0;
-  background: #F8F6F1;
+  background: #F5F6EF;
 }
 
 .busca-conteudo {
@@ -3309,16 +3309,25 @@ main > section.secao-interna.secao-fundo {
   color: #865544;
 }
 
-/*Pequeno destaque editorial no início de cada etapa.*/
+/*Pequeno destaque no início de cada etapa.*/
 :is(.pagina-fases, .pagina-direitos, .pagina-duvidas,
-    .pagina-apoio, .pagina-perda) .titulo-secao {
+    .pagina-apoio, .pagina-perda) .titulo-secao,
+#sobre .titulo-secao,
+#explorar .titulo-secao,
+#como-usar .titulo-secao,
+#cuidados .titulo-secao {
   position: relative;
   border-left: 3px solid var(--argila);
   padding: 3px 0 14px 16px;
   margin-bottom: 22px;
 }
+
 :is(.pagina-fases, .pagina-direitos, .pagina-duvidas,
-    .pagina-apoio, .pagina-perda) .titulo-secao::after {
+    .pagina-apoio, .pagina-perda) .titulo-secao::after,
+#sobre .titulo-secao::after,
+#explorar .titulo-secao::after,
+#como-usar .titulo-secao::after,
+#cuidados .titulo-secao::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -3326,11 +3335,6 @@ main > section.secao-interna.secao-fundo {
   width: min(140px, 40%);
   height: 1px;
   background: #C8AD9F;
-}
-:is(.pagina-fases, .pagina-direitos, .pagina-duvidas,
-    .pagina-apoio, .pagina-perda) .numero-secao {
-  background: var(--argila-clara);
-  color: var(--verde-escuro);
 }
 
 /* Remover recuo externo das grades de cartilhas, sem mexer no
