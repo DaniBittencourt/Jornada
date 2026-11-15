@@ -3475,7 +3475,7 @@ main > section.secao-interna.secao-fundo {
     pointer-events: none;
   -webkit-mask-image: linear-gradient(
     to right,
-    transparent 0%,,
+    transparent 0%,
     black 65%
   );
   mask-image: linear-gradient(
