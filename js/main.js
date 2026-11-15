@@ -170,6 +170,19 @@ document.addEventListener("DOMContentLoaded", () => {
         link.append(titulo, descricao);
         resultados.appendChild(link);
       });
+    
+    });
+  }
+
+  // Botão Buscar da página Dúvidas
+  const campoDuvidas = document.getElementById("buscar-duvidas");
+  const botaoDuvidas = document.getElementById("botao-buscar-duvidas");
+
+  if (campoDuvidas && botaoDuvidas) {
+    botaoDuvidas.addEventListener("click", () => {
+      campoDuvidas.dispatchEvent(
+        new Event("input", { bubbles: true })
+      );
     });
   }
 });

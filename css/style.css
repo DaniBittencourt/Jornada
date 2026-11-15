@@ -2141,13 +2141,36 @@ body.pagina-fases .cartilha-titulo strong {
 
 .pagina-duvidas .busca-painel input {
   display: block;
+  flex: 1;
+  min-width: 0;
   width: 100%;
   padding: 16px 19px;
-  border: 1px solid #bfcbbd;
+  border: 1px solid #bfccbd;
   border-radius: 12px;
   background: #fff;
   font: inherit;
   color: var(--texto);
+}
+
+.pagina-duvidas .busca-campo {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.pagina-duvidas .busca-campo button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  background: var(--verde);
+  color: var(--branco);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pagina-duvidas .busca-campo button:hover {
+  background: var(--verde-escuro);
 }
 
 .pagina-duvidas .busca-painel input:focus-visible {
@@ -2347,15 +2370,22 @@ body.pagina-fases .cartilha-titulo strong {
     margin: 0 auto;
   }
   .pagina-duvidas .pagina-apresentacao .ilustracao-duvidas {
-    position: relative;
-    top: auto;
-    right: auto;
-    display: block;
-    width: min(78%, 340px);
-    max-height: 260px;
-    margin: 0 auto 16px;
-    transform: none;
-  }
+  position: absolute;
+  top: 50%;
+  right: -4%;
+  bottom: auto;
+  left: auto;
+  width: 95%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center right;
+  opacity: 0.20;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
   .pagina-duvidas .faixa-conteudo {
     flex-direction: column;
     align-items: flex-start;
@@ -3333,8 +3363,9 @@ main > section.secao-interna.secao-fundo {
 }
 
 
-/* Ajustes exclusivos para mobile */
+/*Ajustes exclusivos para mobile*/
 @media (max-width: 700px) {
+
   /* Cabeçalho */
   .cabecalho {
     display: flex;
@@ -3385,12 +3416,17 @@ main > section.secao-interna.secao-fundo {
     font-size: 0.8rem;
   }
 
-  /* Imagem da página inicial atrás do texto */
+  /*Imagem da página inicial*/
 .hero {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--creme);
+  background: linear-gradient(
+    110deg,
+    #DCE5D8 0%,
+    #E3E9DE 55%,
+    #F3E4D9 100%
+  );
 }
 
   .hero-conteudo {
@@ -3426,7 +3462,7 @@ main > section.secao-interna.secao-fundo {
     max-height: none;
     object-fit: cover;
     object-position: 65% center;
-    opacity: 0.22;
+    opacity: 0.82;
     transform: none;
     pointer-events: none;
     -webkit-mask-image: linear-gradient(
@@ -3441,7 +3477,7 @@ main > section.secao-interna.secao-fundo {
     );
   }
 
-  /* Botões da página inicial lado a lado */
+  /*Botões da página inicial lado a lado*/
   .hero-botoes {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3459,7 +3495,7 @@ main > section.secao-interna.secao-fundo {
     white-space: normal;
   }
 
-  /* Apresentação das páginas internas */
+  /*Apresentação das páginas internas*/
   .pagina-fases .pagina-apresentacao,
   .pagina-direitos .pagina-apresentacao,
   .pagina-duvidas .pagina-apresentacao,
@@ -3482,7 +3518,7 @@ main > section.secao-interna.secao-fundo {
     margin: 0 auto;
   }
 
-  /* Ilustrações mais visíveis e centralizadas */
+  /*Ilustrações mais visíveis e centralizadas*/
   .pagina-fases .ornamento-botanico,
   .pagina-direitos .ornamento-direitos,
   .pagina-duvidas .ilustracao-duvidas,

@@ -111,7 +111,19 @@
       <label for="buscar-duvidas">
        O que você gostaria de saber?
       </label>
-      <input aria-describedby="status-busca" autocomplete="off" id="buscar-duvidas" placeholder="Busque por assunto: pré-natal, amamentação, direitos..." type="search"/>
+
+    <div class="busca-campo">
+  <input
+    aria-describedby="status-busca"
+    autocomplete="off"
+    id="buscar-duvidas"
+    placeholder="Busque por assunto: pré-natal, amamentação, direitos..."
+    type="search"
+  />
+  <button type="button" id="botao-buscar-duvidas">
+    Buscar
+  </button>
+   </div>
       <p aria-live="polite" class="busca-status" id="status-busca" role="status">
        20 perguntas disponíveis.
       </p>
