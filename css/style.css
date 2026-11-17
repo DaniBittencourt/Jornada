@@ -1020,7 +1020,7 @@ summary:focus-visible {
   padding: 15px 28px;
   border: none;
   border-radius: 12px;
-  background: #748B78;
+  background:  #405C49;
   color: #FFFFFF;
   font: inherit;
   font-weight: 600;
@@ -1028,7 +1028,7 @@ summary:focus-visible {
 }
 
 .form-busca button:hover {
-  background: #536D59;
+  background: #304C3D;
 }
 
 .resultados-busca {
@@ -1656,7 +1656,7 @@ body.pagina-fases .cartilha-titulo strong {
   .cabecalho .botao-acessibilidade { margin-left: 0; }
 }
 
-/*Descrições das ilustrações: mouse e teclado, sem botão adicional.*/
+/*Descrições das ilustrações: mouse e teclado*/
 .hero-imagem img[data-descricao],
 .pagina-apresentacao img[data-descricao] {
   pointer-events: auto !important;
@@ -3481,8 +3481,8 @@ main > section.secao-interna.secao-fundo {
     max-width: none;
     max-height: none;
     object-fit: cover;
-    object-position: 10% center;
-    opacity: 0.24;
+    object-position: 20% center;
+    opacity: 0.20;
     transform: none;
     pointer-events: none;
   -webkit-mask-image: linear-gradient(
