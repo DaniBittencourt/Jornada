@@ -105,6 +105,6 @@ Stéfany Binelo da Rosa - RM576326]
 
 ## Links do projeto
 
-- **Website publicado:** https://danibittencourt.github.io/Jornada./
-- **Repositório GitHub:** https://github.com/DaniBittencourt/Jornada.
+- **Website publicado:** https://danibittencourt.github.io/Jornada/
+- **Repositório GitHub:** https://github.com/DaniBittencourt/Jornada
 - **Vídeo de apresentação:** https://youtu.be/_d8fTxAoGiE
